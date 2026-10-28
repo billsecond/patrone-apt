@@ -4,7 +4,7 @@ The apt repository Patrone Linux gets its own updates from, at
 <https://billsecond.github.io/patrone-apt>. GitHub hosts it (Pages for the
 index, a release for the files); Patrone runs no servers of its own.
 
-Every Patrone Linux install has it already: `patrone-desktop` installs the
+Patrone Linux installs have it since `patrone-desktop` 0.2.1, which installs the
 source (`/etc/apt/sources.list.d/patrone.sources`), the key
 (`/usr/share/keyrings/patrone-archive-keyring.gpg`) and the pins that put
 Patrone's builds before Ubuntu's (`/etc/apt/preferences.d/patrone.pref`).
@@ -91,6 +91,6 @@ sudo apt update
 
 GitHub Pages sites can be up to 1 GB and have a soft limit of 100 GB of
 traffic a month. The site is the newest packages plus the previous ones
-(about 250 MB now). If Patrone outgrows that, the index and debs can move to
+(about 120 MB now). If Patrone outgrows that, the index and debs can move to
 any static host without changing the key; installs would need a
 `patrone-desktop` update with the new address, published here first.
