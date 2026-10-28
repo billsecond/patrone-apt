@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patrone Linux packages</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c1c1f; --muted: #5c5c66; --accent: #2372dd; --code: #f2f4f8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111216; --fg: #e8e8ec; --muted: #a0a0aa; --accent: #4da0fc; --code: #1d1f25; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  p.lead { color: var(--muted); margin-top: 0; }
+  a { color: var(--accent); }
+  pre, code { font-family: ui-monospace, "JetBrains Mono", Consolas, monospace; font-size: .9rem; }
+  pre { background: var(--code); padding: .9rem 1rem; border-radius: 8px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+<h1>Patrone Linux packages</h1>
+<p class="lead">The apt repository Patrone Linux gets its own updates from. GitHub
+hosts it; Patrone runs no servers of its own.</p>
+
+<p>Patrone Linux already uses it: it comes with this repository's source and
+key, and its updates arrive through Patrone Software and the daily automatic
+updates. Nothing here needs doing on a Patrone Linux computer.</p>
+
+<h2>What's in it</h2>
+<p>Patrone's own packages (the desktop, taskbar, apps, branding and fonts), and
+Patrone's builds of a few of Ubuntu's packages that carry Patrone's changes:
+GDM (the login screen), GNOME Settings and first-login setup. Those are
+Ubuntu's version plus <code>patrone</code> and a number, rebuilt whenever
+Ubuntu updates them.</p>
+
+<h2>The key</h2>
+<p>Everything is signed with the Patrone Linux Archive key,
+<a href="patrone-archive-keyring.asc">patrone-archive-keyring.asc</a>, fingerprint</p>
+<pre>8FE6 1B83 753C 2636 CD74  0259 4FC3 52E3 D384 225F</pre>
+
+<h2>Adding it by hand</h2>
+<p>For Ubuntu 26.04 LTS (resolute), amd64:</p>
+<pre>sudo curl -fsSLo /usr/share/keyrings/patrone-archive-keyring.gpg https://billsecond.github.io/patrone-apt/patrone-archive-keyring.gpg
+sudo curl -fsSLo /etc/apt/sources.list.d/patrone.sources https://billsecond.github.io/patrone-apt/patrone.sources
+sudo apt update</pre>
+<p>The source is at <a href="https://github.com/billsecond/patrone-apt">github.com/billsecond/patrone-apt</a>.</p>
+</main>
+</body>
+</html>

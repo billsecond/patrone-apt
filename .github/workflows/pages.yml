@@ -1,0 +1,47 @@
+# Publishes the repository to GitHub Pages whenever the index changes: the
+# signed index and key from main, and the .deb files it names from the
+# "pool" release (tools/assemble-site.sh). Patrone's packaging/publish.sh
+# uploads the debs and pushes the index, on the dev VM, where the signing key
+# is; nothing here can sign.
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: Put the site together
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: tools/assemble-site.sh "$RUNNER_TEMP/site"
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

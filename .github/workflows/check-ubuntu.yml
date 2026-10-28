@@ -1,0 +1,61 @@
+# Once a day, compares Patrone's builds of Ubuntu's packages (GDM, GNOME
+# Settings, first-login setup) with what Ubuntu has published for resolute
+# (tools/check-ubuntu.sh), and keeps an issue open for each one Ubuntu has
+# updated since, until Patrone's rebuild is published. The dev VM rebuilds
+# and publishes them itself, also daily (packaging/ubuntu-updates.sh in
+# Patrone Linux's repository); an issue that stays open means that hasn't
+# happened, for instance while the VM is off, or that the build failed (the
+# VM then opens an issue of its own with the log).
+name: Check Ubuntu's updates
+
+on:
+  schedule:
+    - cron: '41 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Compare with Ubuntu
+        run: tools/check-ubuntu.sh | tee "$RUNNER_TEMP/check"
+
+      - name: Open or close issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create ubuntu-update --color d93f0b \
+              --description "Ubuntu has updated a package Patrone rebuilds" 2>/dev/null || true
+          while read -r state source built_from newest pocket; do
+              open=$(gh issue list --label ubuntu-update --state open --limit 100 --json number,title \
+                  --jq ".[] | select(.title | startswith(\"$source \")) | .number")
+              title="$source $newest: Ubuntu's update isn't in Patrone's build yet"
+              if [ "$state" = behind ]; then
+                  body="Ubuntu has published $source $newest for resolute ($pocket). Patrone's build is made from $built_from, so computers with Patrone Linux keep that one (Patrone's apt pinning) until it's built again from Ubuntu's new version.
+
+          The dev VM does that by itself each day (packaging/ubuntu-updates.sh in Patrone Linux's repository, then packaging/publish.sh). This issue closes by itself once the rebuild is published. If it stays open, the VM may be off, or the build failed: look for an issue named \"Rebuilding $source ...\"."
+                  if [ -z "$open" ]; then
+                      gh issue create --label ubuntu-update --title "$title" --body "$body"
+                  else
+                      for n in $open; do gh issue edit "$n" --title "$title" --body "$body"; done
+                  fi
+              else
+                  for n in $open; do
+                      gh issue close "$n" --comment "Patrone's build is made from Ubuntu's $built_from now, Ubuntu's newest."
+                  done
+              fi
+          done <"$RUNNER_TEMP/check"
+
+      # GitHub turns off a scheduled workflow after 60 days without activity
+      # in the repository; enabling it again restarts that count.
+      - name: Keep the daily check on
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/check-ubuntu.yml/enable"
