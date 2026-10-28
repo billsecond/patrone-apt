@@ -337,48 +337,6 @@ Description: Patrone Linux's default apps
  Ubuntu's Files' place in the favorites, and archives, .deb packages and
  Flatpak files in Patrone Unpack. Users' own choices still win.
 
-Package: patrone-desktop
-Architecture: all
-Version: 0.2.0
-Priority: optional
-Section: metapackages
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 47
-Provides: update-notifier
-Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
-Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
-Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
-Filename: pool/main/patrone-desktop_0.2.0_all.deb
-Size: 11318
-MD5sum: 1a5806a0ed16351acc4d0817b94854e7
-SHA1: ee923079ea5ade8f009e056770af23e99c789d80
-SHA256: 27b46b087b13716b442ba4bb8d47f44cc70b15eb71f9365bc892a18557d23201
-SHA512: 82b6b01628a53da4b9cd10177ba468d5ca3c68bd2b515b477798313b86652a294ea30f6c826c2e44aea2a83c13db3a94bb4a2f21ba76ba1890bf4dc0b2b02eee
-Description: Patrone Linux's desktop
- Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
- own services: no Ubuntu Pro (its client, its services and its notices), no
- Software Updater (Patrone Software tells of updates and installs them), no
- hwctl (Canonical's hardware-certification tool), and nothing that reports
- to Canonical: no whoopsie (error reports), ubuntu-insights or ubuntu-report
- (system reports), and no apport-gtk, the crash dialog that offered to send
- them. Crash reports still collect in /var/crash for debugging, and nothing
- sends them. First-login setup skips Ubuntu's page that asks to send reports
- and its Ubuntu Pro page. It lists Ubuntu's desktop packages itself, in
- place of Ubuntu's metapackages (ubuntu-desktop-minimal and ubuntu-minimal),
- which need Ubuntu Pro and Software Updater.
- .
- The clock is set from NTS servers run by Cloudflare, Netnod and PTB,
- NetworkManager checks for Wi-Fi sign-in pages with GNOME's server, and
- nothing offers to upgrade to Ubuntu's next release. Its app store is GNOME
- Software, with Patrone's picks, in place of Canonical's App Center. What
- the system connects to, and who runs each service, is in
- /usr/share/doc/patrone-desktop/connections.txt.
- .
- It also brings a few everyday tools: fastfetch (system information, in
- Patrone's colors), nano and the full vim; btop and htop (what's running);
- tree, ripgrep (rg) and fzf (finding files and text); bat (files with
- highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
-
 Package: patrone-file-manager
 Architecture: amd64
 Version: 0.3.1
@@ -665,4 +623,49 @@ Description: Patrone's app for archives, .deb packages and Flatpak apps
  runtime comes from there, and .deb packages for everyone once an
  administrator's password is given. It shows what each one is first: its
  version, size, permissions or what else it needs.
+
+Package: patrone-desktop
+Architecture: all
+Version: 0.2.1
+Priority: optional
+Section: metapackages
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 55
+Provides: update-notifier
+Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
+Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
+Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
+Filename: pool/main/patrone-desktop_0.2.1_all.deb
+Size: 12768
+MD5sum: d451d65d46358234882ab88650c0f0cb
+SHA1: c6ef43778a4755698684cecc2c2cd6f1a16e439a
+SHA256: 7ef222274839af5e9e15acdbeba2e52fb33fb7052958df79a4b8877f93fe16e9
+SHA512: b6a68d7ef4fb585c6f32e9848b9e970fa432b40f4d4c51d0d5a6562f58c5fa99b133d1ca2ecf8437dd31e86f62c3e3ea2df46fdc48406e9550f6f6428a055898
+Description: Patrone Linux's desktop
+ Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
+ own services: no Ubuntu Pro (its client, its services and its notices), no
+ Software Updater (Patrone Software tells of updates and installs them), no
+ hwctl (Canonical's hardware-certification tool), and nothing that reports
+ to Canonical: no whoopsie (error reports), ubuntu-insights or ubuntu-report
+ (system reports), and no apport-gtk, the crash dialog that offered to send
+ them. Crash reports still collect in /var/crash for debugging, and nothing
+ sends them. First-login setup skips Ubuntu's page that asks to send reports
+ and its Ubuntu Pro page. It lists Ubuntu's desktop packages itself, in
+ place of Ubuntu's metapackages (ubuntu-desktop-minimal and ubuntu-minimal),
+ which need Ubuntu Pro and Software Updater.
+ .
+ Patrone's own updates come from its apt repository on GitHub Pages
+ (billsecond.github.io/patrone-apt), whose key and source it installs; its
+ builds of Ubuntu's GDM, GNOME Settings and first-login setup come before
+ Ubuntu's own. The clock is set from NTS servers run by Cloudflare, Netnod
+ and PTB, NetworkManager checks for Wi-Fi sign-in pages with GNOME's server,
+ and nothing offers to upgrade to Ubuntu's next release. Its app store is GNOME
+ Software, with Patrone's picks, in place of Canonical's App Center. What
+ the system connects to, and who runs each service, is in
+ /usr/share/doc/patrone-desktop/connections.txt.
+ .
+ It also brings a few everyday tools: fastfetch (system information, in
+ Patrone's colors), nano and the full vim; btop and htop (what's running);
+ tree, ripgrep (rg) and fzf (finding files and text); bat (files with
+ highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
 
