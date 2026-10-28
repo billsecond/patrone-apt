@@ -1,4 +1,2 @@
+* text=auto eol=lf
 *.gpg binary
-*.sh text eol=lf
-*.yml text eol=lf
-dists/** -text
