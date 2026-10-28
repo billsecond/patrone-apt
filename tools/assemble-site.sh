@@ -13,9 +13,11 @@ index=dists/resolute/main/binary-amd64/Packages
 
 rm -rf "$site"
 mkdir -p "$site"
-cp -r dists index.html patrone-archive-keyring.gpg patrone-archive-keyring.asc \
+cp index.html patrone-archive-keyring.gpg patrone-archive-keyring.asc \
     patrone.sources "$site/"
+# Nothing published yet: the landing page and key only
 [ -f "$index" ] || exit 0
+cp -r dists "$site/"
 
 # Filename and SHA256 of each deb, in this index and the previous one
 files() { awk '$1 == "Filename:" { f = $2 } $1 == "SHA256:" { print $2 "  " f }'; }
