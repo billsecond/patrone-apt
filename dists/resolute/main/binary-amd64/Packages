@@ -255,42 +255,6 @@ Description: GNOME Display Manager (shared library)
  .
  This package contains the shared library required by gnome-shell.
 
-Package: patrone-branding
-Architecture: all
-Version: 0.1.20
-Priority: optional
-Section: misc
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 112587
-Provides: ubuntu-docs, ubuntu-wallpapers
-Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patrone-sans, plymouth-theme-spinner, plymouth-theme-ubuntu-text
-Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Filename: pool/main/patrone-branding_0.1.20_all.deb
-Size: 93615754
-MD5sum: af6a7dcb9ddd9973a2e5aad69791ee0f
-SHA1: 1f2b1f668215ec78adc05bb7143ac2feb7d3e046
-SHA256: 8583c80522d5d8bd649998398e7dfbb5f1b23ae0ed1d0a9d57cd6a3ba630319e
-SHA512: 98edc8be16700bae485af1511262ffa18ab7c161e0994e811c29fe7ecb8132eaf1248dca75430f5b8f8422bfdf75cca604cd34c5a1cf29286a07d32229f53ac8
-Description: Patrone Linux's name, logos and artwork
- Names the system Patrone Linux and puts Patrone's logo where Ubuntu's was:
- the boot splash, the boot menu, the login screen, Settings > About, the text
- console's banner and the welcome message at login, which also loses Ubuntu's
- help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
- colors and a blue default avatar. Noto Sans is the typeface everywhere:
- the desktop, apps, the login screen, and web pages that ask for Segoe UI or
- a plain sans-serif font, Chromium's included. It installs the Patrone
- wallpaper as the default, light in the light style and dark in the dark
- one, with variants to choose from in Settings in place of Ubuntu's
- wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
- in place of Ubuntu's orange, gives the desktop, apps and the login screen
- Patrone's cursors (falling back to Adwaita's for any it lacks), turns
- Ubuntu's dock off by default, and sets up fastfetch with the Patrone logo.
- Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
- replaces ubuntu-docs), and the logo icons apps ask for (start-here and
- distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
- Yaru's icons. Removing the package puts Ubuntu's files back.
-
 Package: patrone-browser-chooser
 Architecture: amd64
 Version: 0.1.0
@@ -313,54 +277,6 @@ Description: Asks which web browser to install, the first time one's needed
  Google Chrome, Microsoft Edge, Vivaldi, Opera, LibreWolf, Zen Browser or
  GNOME Web. Patrone Software installs it from Flathub; it then becomes the
  default for web links and opens, with the link that was waiting.
-
-Package: patrone-default-apps
-Architecture: all
-Version: 0.2.0
-Priority: optional
-Section: misc
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 21
-Depends: dconf-gsettings-backend | gsettings-backend, patrone-browser-chooser
-Recommends: patrone-file-manager, patrone-terminal, patrone-unpack
-Filename: pool/main/patrone-default-apps_0.2.0_all.deb
-Size: 4026
-MD5sum: c377f150e19493addd2ed809d093df72
-SHA1: bf6c96024fbc2780f91665d76d6302568865c9c1
-SHA256: 90e682cad17c130e02598591bc1b9aa65e7c06c0c94340fba40e608fb9597470
-SHA512: 05f83a56a7953dff07e4a7dd78c6acb6b8bbd0d2ef99c3563246ad344c7bad81c8304908cd520ef9476bea6046c0586b74aa495d111be4d744f8fc4462ef72f3
-Description: Patrone Linux's default apps
- Patrone Linux comes with no web browser: until one's installed, web links
- open Patrone Browser Chooser, which asks which one to install. Whichever
- browser is installed then opens them, and comes first in the favorites,
- with Patrone Terminal. Folders open in Patrone File Manager, which takes
- Ubuntu's Files' place in the favorites, and archives, .deb packages and
- Flatpak files in Patrone Unpack. Users' own choices still win.
-
-Package: patrone-file-manager
-Architecture: amd64
-Version: 0.3.1
-Priority: optional
-Section: utils
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 2827
-Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
-Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
-Filename: pool/main/patrone-file-manager_0.3.1_amd64.deb
-Size: 1118512
-MD5sum: d2f0d0663dacadf42ab9169a1b1a728e
-SHA1: 657b6fb98ebbd10f847ea160fc3b5b3b1e35548a
-SHA256: ed6c2db91606d378d93bd65a1056786cfc5743d1bd910f41bccd3747c63f11ea
-SHA512: fb886423b95360077b99a3e281f4c4788f0953037b5206270e1fdb1f1dc33d8474eec2fbe1e19e7c79ad808fe8200645b2ebb1483eff26662f7081dfa1c4b5b2
-Description: file manager for Patrone Linux
- Patrone File Manager is the file manager of Patrone Linux, in the image of
- Windows 11's File Explorer: tabs, the command bar, breadcrumbs, the
- navigation pane with Quick access, Home, Gallery and This PC, eight views,
- the details and preview panes, Windows-style right-click menus, Folder
- Options and Properties, and copying, moving and deleting with progress,
- conflict handling and undo. It works with the Recycle Bin (the trash),
- removable drives and network places through GIO. It also draws the
- desktop and the desktop bubble, which Patrone's taskbar hosts.
 
 Package: patrone-gnome-taskbar
 Architecture: all
@@ -445,42 +361,6 @@ Description: Patrone Linux's installer, for its live session
  Linux as its name. It works with the ubuntu-desktop-bootstrap snap's install
  engine, and Patrone's ISO starts it in place of the snap's own front end.
  patrone-branding gives it Patrone's colors, pictures and slides.
-
-Package: patrone-remote-desktop
-Architecture: amd64
-Version: 0.5.0
-Priority: optional
-Section: net
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 216
-Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libfreerdp-server-proxy3-3 (>= 3.0.0), libfreerdp3-3 (>= 3.16.0), libglib2.0-0t64 (>= 2.12.0), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwinpr3-3 (>= 3.17.0), libxkbcommon0 (>= 0.5.0), adduser, cage, freerdp-proxy, freerdp-sdl, gdm3, gnome-remote-desktop, iproute2, libpam-modules, libpam-runtime, openssl, pkexec, python3, util-linux, xkb-data
-Filename: pool/main/patrone-remote-desktop_0.5.0_amd64.deb
-Size: 56856
-MD5sum: 4657ef0ae73e2491f647e9e09ddc1614
-SHA1: 790b2e5ee4320239e90b91a51b1fe9fce4bc696f
-SHA256: 959cbc0c8e39f77e05a0fb6f3da104cec2e844c4f5048aabea5f4e2fda59d366
-SHA512: c5c75ecf7814f263797b2d27e82044a4a208e742ccf7d3a7d5dab751b6befec6f9433e576cb4507da7573129f477ff8dbdf64f99b50eebbee8d96319c85a27e5
-Description: Patrone's desktops: one per account, on the screen and remotely
- Each account has one desktop, which keeps running whether or not anyone is
- looking at it. The machine's own screen (the "Patrone Desktop" login
- session) and remote desktop clients are both views of it, and whoever
- connects last has it: a remote sign-in takes the screen back to the login
- screen, and signing in on the screen disconnects the remote client. It
- works the way users of Windows' Remote Desktop expect.
- .
- RDP clients, such as Windows' Remote Desktop Connection, sign in with the
- account's own username and password, which PAM checks on every connection.
- Only accounts in the remote-desktop group may, and only after an
- administrator turns it on: with the Remote Desktop switch in Settings'
- System > Remote Desktop (Patrone's build of GNOME Settings), or
- "patrone-remote-desktop enable".
- .
- On Hyper-V, VMConnect's enhanced session (Remote Desktop over a Hyper-V
- socket, which only the Hyper-V host can open) shows a login screen in its
- window. Any account that may sign in at the computer signs in there with
- its own password, checked by PAM, and gets its own desktop, with the
- clipboard, sound and a screen that follows the window, whether or not
- Remote Desktop is turned on.
 
 Package: patrone-settings
 Architecture: amd64
@@ -624,23 +504,82 @@ Description: Patrone's app for archives, .deb packages and Flatpak apps
  administrator's password is given. It shows what each one is first: its
  version, size, permissions or what else it needs.
 
-Package: patrone-desktop
+Package: patrone-branding
+Architecture: all
+Version: 0.1.21
+Priority: optional
+Section: misc
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 112588
+Provides: ubuntu-docs, ubuntu-wallpapers
+Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patrone-sans, plymouth-theme-spinner, plymouth-theme-ubuntu-text
+Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Filename: pool/main/patrone-branding_0.1.21_all.deb
+Size: 93615202
+MD5sum: fd87d7be34c88bde1135f9bee6dca884
+SHA1: 5e6563770be0e2c8cc787d7e767fedd0613fe4b1
+SHA256: 695e797a373552384af1155ea10da930868f2e300e8a5a59d982f3c40dc224b6
+SHA512: 353b7fbac608d279d968703bbe81dce1e37f0833666fee4d4761894178eff5e0781db75ab5faf329be9b36c9f396cc8c537aa2f6f858afb8fd7029b13c4fb1b3
+Description: Patrone Linux's name, logos and artwork
+ Names the system Patrone Linux and puts Patrone's logo where Ubuntu's was:
+ the boot splash, the boot menu, the login screen, Settings > About, the text
+ console's banner and the welcome message at login, which also loses Ubuntu's
+ help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
+ colors and a blue default avatar. Noto Sans is the typeface everywhere:
+ the desktop, apps, the login screen, and web pages that ask for Segoe UI or
+ a plain sans-serif font, Chromium's included. It installs the Patrone
+ wallpaper as the default, light in the light style and dark in the dark
+ one, with variants to choose from in Settings in place of Ubuntu's
+ wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
+ in place of Ubuntu's orange, gives the desktop, apps and the login screen
+ Patrone's cursors (falling back to Adwaita's for any it lacks), turns
+ Ubuntu's dock off by default, and sets up fastfetch with the Patrone logo.
+ Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
+ replaces ubuntu-docs), and the logo icons apps ask for (start-here and
+ distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
+ Yaru's icons. Removing the package puts Ubuntu's files back.
+
+Package: patrone-default-apps
 Architecture: all
 Version: 0.2.1
+Priority: optional
+Section: misc
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 23
+Depends: dconf-gsettings-backend | gsettings-backend, patrone-browser-chooser
+Recommends: patrone-file-manager, patrone-terminal, patrone-unpack
+Filename: pool/main/patrone-default-apps_0.2.1_all.deb
+Size: 4476
+MD5sum: dac1a47e5aabdcc2eb6e5284f79988b2
+SHA1: df60bb0c187027fcb54b9722cb4c35f639bfa3a0
+SHA256: a0975bb06e63008a4e0cd4fc58954cbc5392ca4bdcdebaf2490c87773a1bcbcc
+SHA512: be4ffe1782bd2cf755aabcc7d74421343181673bae530068d11c999129618053726eb86fd4a1cb5ad4f5b09a8c9e97cf568b852584b363228e43b259f7246635
+Description: Patrone Linux's default apps
+ Patrone Linux comes with no web browser: until one's installed, web links
+ open Patrone Browser Chooser, which asks which one to install. Whichever
+ browser is installed then opens them, and comes first in the favorites,
+ with Patrone Terminal. Folders open in Patrone File Manager, which takes
+ Ubuntu's Files' place in the favorites, and archives, .deb packages and
+ Flatpak files in Patrone Unpack. Users' own choices still win.
+
+Package: patrone-desktop
+Architecture: all
+Version: 0.2.3
 Priority: optional
 Section: metapackages
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
 Installed-Size: 55
 Provides: update-notifier
 Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
-Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
+Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-hyperv-setup, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, showtime, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
 Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
-Filename: pool/main/patrone-desktop_0.2.1_all.deb
-Size: 12768
-MD5sum: d451d65d46358234882ab88650c0f0cb
-SHA1: c6ef43778a4755698684cecc2c2cd6f1a16e439a
-SHA256: 7ef222274839af5e9e15acdbeba2e52fb33fb7052958df79a4b8877f93fe16e9
-SHA512: b6a68d7ef4fb585c6f32e9848b9e970fa432b40f4d4c51d0d5a6562f58c5fa99b133d1ca2ecf8437dd31e86f62c3e3ea2df46fdc48406e9550f6f6428a055898
+Filename: pool/main/patrone-desktop_0.2.3_all.deb
+Size: 13080
+MD5sum: 36ee988ca4bc004cbdfd5b45faa60b3b
+SHA1: 19437cff57fd45c22aa62f3fe84113a70270dafa
+SHA256: 84e4729e1d40493a69029a3712e5514f59f17eeef1e383e75f2ff3f0135606f6
+SHA512: b2025a60279a74fc92fa8d54538940fe24e996fadd89ed6e667f58d2802534f4d4147eec5132dea0927a6a7b3bcc3c823a4cc293aea34572a26109e76aaa8d64
 Description: Patrone Linux's desktop
  Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
  own services: no Ubuntu Pro (its client, its services and its notices), no
@@ -668,4 +607,94 @@ Description: Patrone Linux's desktop
  Patrone's colors), nano and the full vim; btop and htop (what's running);
  tree, ripgrep (rg) and fzf (finding files and text); bat (files with
  highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
+
+Package: patrone-file-manager
+Architecture: amd64
+Version: 0.3.3
+Priority: optional
+Section: utils
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 2982
+Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
+Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
+Filename: pool/main/patrone-file-manager_0.3.3_amd64.deb
+Size: 1199698
+MD5sum: ad62cf0c43e9d364e0db53a482703a7e
+SHA1: 0733d7b135dc13635c399fd8617d14df7d0a9659
+SHA256: a768bd59783cf70485d175bb4c01dfbc93b6486f3e3351a0147d77a51dd292e0
+SHA512: 89298aa04937f263081d58101b8b7b0491c2979184d40cedc5896c35a01db1243b65f6e758e6640044c72d9a7bfe9172f36803c26334a09a3fa58efa433d0d86
+Description: file manager for Patrone Linux
+ Patrone File Manager is the file manager of Patrone Linux, in the image of
+ Windows 11's File Explorer: tabs, the command bar, breadcrumbs, the
+ navigation pane with Quick access, Home, Gallery and This PC, eight views,
+ the details and preview panes, Windows-style right-click menus, Folder
+ Options and Properties, and copying, moving and deleting with progress,
+ conflict handling and undo. It works with the Recycle Bin (the trash),
+ removable drives and network places through GIO. It also draws the
+ desktop and the desktop bubble, which Patrone's taskbar hosts.
+
+Package: patrone-hyperv-setup
+Architecture: amd64
+Version: 0.1.1
+Priority: optional
+Section: admin
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 589
+Depends: libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.54.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), apt, pkexec, systemd
+Filename: pool/main/patrone-hyperv-setup_0.1.1_amd64.deb
+Size: 267448
+MD5sum: e6399f7780a5f7575a4305c4715ab619
+SHA1: 3bf222406d70c7edc46bd67df083999c344639f5
+SHA256: 4fb6af286fe70fe481ff3f96f0888f8fa9aadd1a055e643e47dcab6f296d783e
+SHA512: 885ee34d53d931ddd9cbdea9ebb6e2e11750a1b1b4088c83247f50fec68b82aa43b8d814638f37eb3ec1c3629674e35f8686079269cc2b89c52faacc36db6110
+Description: Offers to set up Hyper-V support at login
+ At each desktop login in a Hyper-V virtual machine, Patrone Hyper-V Setup
+ checks what Patrone Linux needs there, and if something's missing, shows
+ a dialog that offers to set it up with one administrator's password:
+ Hyper-V's integration services (patrone-guest-tools) and VMConnect's
+ enhanced session (patrone-remote-desktop's service for it). For what has
+ to change on Windows, the VM's enhanced session transport and any
+ integration service turned off for it, it shows the PowerShell command to
+ run there, with a Copy button. "Don't show this again" turns it off for
+ the account.
+ .
+ It runs only in Hyper-V virtual machines (systemd's
+ ConditionVirtualization), never in the installer's live session, and shows
+ nothing when everything is set up.
+
+Package: patrone-remote-desktop
+Architecture: amd64
+Version: 0.5.1
+Priority: optional
+Section: net
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 217
+Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libfreerdp-server-proxy3-3 (>= 3.0.0), libfreerdp3-3 (>= 3.16.0), libglib2.0-0t64 (>= 2.12.0), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwinpr3-3 (>= 3.17.0), libxkbcommon0 (>= 0.5.0), adduser, cage, freerdp-proxy, freerdp-sdl, gdm3, gnome-remote-desktop, iproute2, libpam-modules, libpam-runtime, openssl, pkexec, python3, util-linux, xkb-data
+Filename: pool/main/patrone-remote-desktop_0.5.1_amd64.deb
+Size: 57226
+MD5sum: 2ed7d5a84660593288daa33f0807510f
+SHA1: 3f091fd2905d1fdc19f9d61ad2b96b602a17b0ec
+SHA256: 39b4f9207f15e6e25dbc9632c731dea9dee0a13dbfd706e53380434e38f72004
+SHA512: 641540a6406e56a8594a9eb06e4ed01b8f4d33b3374a253582841e75db6e5cc0a38935b0bb96eac4b827a321829ba9bf1e639fe8decceb5b28df517ee3a50d6a
+Description: Patrone's desktops: one per account, on the screen and remotely
+ Each account has one desktop, which keeps running whether or not anyone is
+ looking at it. The machine's own screen (the "Patrone Desktop" login
+ session) and remote desktop clients are both views of it, and whoever
+ connects last has it: a remote sign-in takes the screen back to the login
+ screen, and signing in on the screen disconnects the remote client. It
+ works the way users of Windows' Remote Desktop expect.
+ .
+ RDP clients, such as Windows' Remote Desktop Connection, sign in with the
+ account's own username and password, which PAM checks on every connection.
+ Only accounts in the remote-desktop group may, and only after an
+ administrator turns it on: with the Remote Desktop switch in Settings'
+ System > Remote Desktop (Patrone's build of GNOME Settings), or
+ "patrone-remote-desktop enable".
+ .
+ On Hyper-V, VMConnect's enhanced session (Remote Desktop over a Hyper-V
+ socket, which only the Hyper-V host can open) shows a login screen in its
+ window. Any account that may sign in at the computer signs in there with
+ its own password, checked by PAM, and gets its own desktop, with the
+ clipboard, sound and a screen that follows the window, whether or not
+ Remote Desktop is turned on.
 
