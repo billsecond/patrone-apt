@@ -1,0 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64
+Codename: resolute
+Components: main
+Date: Wed, 28 Oct 2026 19:46:10 +0000
+Description: Patrone Linux's packages, for Ubuntu 26.04 LTS
+Label: Patrone Linux
+Origin: Patrone
+Suite: resolute
+MD5Sum:
+ 502e898453237f8f386b0eb0c8fcae22            42006 main/binary-amd64/Packages
+ 30f658e8cc7ac4195f1a639515c79c34            15052 main/binary-amd64/Packages.gz
+ f72a53b500b1f91d6f0823320c1691df            13916 main/binary-amd64/Packages.xz
+SHA1:
+ a0b6d826d916650d440164b350bde0c82fa193fb            42006 main/binary-amd64/Packages
+ ccf3c1204d202b6d17237f893bff4ae6dcf2009b            15052 main/binary-amd64/Packages.gz
+ 586a92380cf72cc1875fae1e79d78126b2148ba5            13916 main/binary-amd64/Packages.xz
+SHA256:
+ 15a6e61c4ec754c80b2c9a8161887fe066be3dd63ae12c08d0e6b79e4d5e2420            42006 main/binary-amd64/Packages
+ 658964445f489bb872e879d2290f35403ccee4189758869d058f4b13111d8e17            15052 main/binary-amd64/Packages.gz
+ 6bbfdc47b70a8e954d2f2dcb37c20c79dc38b5980d8ca3616edb76c10aa4e530            13916 main/binary-amd64/Packages.xz
+SHA512:
+ 0fef5193fcc6420c982295530ace38572d105619ccf4d4ac3bd397b5c8a620e5c73584ea74f91a71528cd4a03bf9c159fd9b2ec918a033a06e0865f71c1ffe18            42006 main/binary-amd64/Packages
+ b819c59a51f26204249db1daf5e333601ade5d5cc9c45e647f89be3b2672a564d30c2cc2081621731ba2a17880f8bc218092e942d1086dfde3e6ee58ce4e52d9            15052 main/binary-amd64/Packages.gz
+ 3544b6ec4b621f34d705b593c3b9e803b930a80b2b3c7a96c019e923d684da8e051823f25dbacb95199908651148ea6f8cb706d55dfe968932affdf160d9754d            13916 main/binary-amd64/Packages.xz
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQSP5huDdTwmNs10AllPw1Lj04QiXwUCauJRAgAKCRBPw1Lj04Qi
+X8F7AP9+HSieyseFz69LejS/ZV8sfifI4zZU5DH6QhaYoqbaTQD/Vh/kbnv2FZQn
++9eK8UGgnqjlu7QNovZI1iPM01/qmwI=
+=lUbr
+-----END PGP SIGNATURE-----
