@@ -637,20 +637,45 @@ Description: Offers to set up Hyper-V support at login
  ConditionVirtualization), never in the installer's live session, and shows
  nothing when everything is set up.
 
+Package: patrone-file-manager
+Architecture: amd64
+Version: 0.3.5
+Priority: optional
+Section: utils
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 3019
+Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
+Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
+Filename: pool/main/patrone-file-manager_0.3.5_amd64.deb
+Size: 1215334
+MD5sum: 3db3ba8ff4708f52dec721a007618357
+SHA1: d73a513b268394afff3cc46a426973ee5518427e
+SHA256: 6f04e2254034aaa32db530821cb21ce458a01f536b356be0399a4af42bc4cc7c
+SHA512: 09d31013ed2162b781440c0d0e9a45d8b1b5acef44c603eb001f3ba8a4b023a2a1c17a8b74fa2229ad426485cb822fedce1b31408fdd2864d5d481f5bbe923d8
+Description: file manager for Patrone Linux
+ Patrone File Manager is the file manager of Patrone Linux, in the image of
+ Windows 11's File Explorer: tabs, the command bar, breadcrumbs, the
+ navigation pane with Quick access, Home, Gallery and This PC, eight views,
+ the details and preview panes, Windows-style right-click menus, Folder
+ Options and Properties, and copying, moving and deleting with progress,
+ conflict handling and undo. It works with the Recycle Bin (the trash),
+ removable drives and network places through GIO. It also draws the
+ desktop and the desktop bubble, which Patrone's taskbar hosts.
+
 Package: patrone-remote-desktop
 Architecture: amd64
-Version: 0.5.1
+Version: 0.5.2
 Priority: optional
 Section: net
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 217
+Installed-Size: 218
 Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libfreerdp-server-proxy3-3 (>= 3.0.0), libfreerdp3-3 (>= 3.16.0), libglib2.0-0t64 (>= 2.12.0), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwinpr3-3 (>= 3.17.0), libxkbcommon0 (>= 0.5.0), adduser, cage, freerdp-proxy, freerdp-sdl, gdm3, gnome-remote-desktop, iproute2, libpam-modules, libpam-runtime, openssl, pkexec, python3, util-linux, xkb-data
-Filename: pool/main/patrone-remote-desktop_0.5.1_amd64.deb
-Size: 57226
-MD5sum: 2ed7d5a84660593288daa33f0807510f
-SHA1: 3f091fd2905d1fdc19f9d61ad2b96b602a17b0ec
-SHA256: 39b4f9207f15e6e25dbc9632c731dea9dee0a13dbfd706e53380434e38f72004
-SHA512: 641540a6406e56a8594a9eb06e4ed01b8f4d33b3374a253582841e75db6e5cc0a38935b0bb96eac4b827a321829ba9bf1e639fe8decceb5b28df517ee3a50d6a
+Filename: pool/main/patrone-remote-desktop_0.5.2_amd64.deb
+Size: 58396
+MD5sum: 8d485ffb86e6e74d8f8d8f087df73387
+SHA1: 44e15b0aae4091bdb64e8126ddd7ff5ea984fca9
+SHA256: 132cc7008a3431febdb59623538d823f1534fa1b554dd645375c27ce9a7a730a
+SHA512: fe96e46de52de074ba04a526b1e2d4cc7e6b6f119ee17feef48851dd66d84dc687b798ccc25ede26490189a00195ed22db464f92238b6cffa13e13bd97896199
 Description: Patrone's desktops: one per account, on the screen and remotely
  Each account has one desktop, which keeps running whether or not anyone is
  looking at it. The machine's own screen (the "Patrone Desktop" login
@@ -672,29 +697,4 @@ Description: Patrone's desktops: one per account, on the screen and remotely
  its own password, checked by PAM, and gets its own desktop, with the
  clipboard, sound and a screen that follows the window, whether or not
  Remote Desktop is turned on.
-
-Package: patrone-file-manager
-Architecture: amd64
-Version: 0.3.4
-Priority: optional
-Section: utils
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 3010
-Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
-Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
-Filename: pool/main/patrone-file-manager_0.3.4_amd64.deb
-Size: 1210908
-MD5sum: 211308795f90f0e235d4b7e647ec5fdd
-SHA1: 72f0b7e326c408cabc96ae06af9c1349b81f5855
-SHA256: c98508b84ec4c3e0f5dce8b073103040babfbb024197611668c42888054e01b1
-SHA512: 8512a2dc6f11d352dce102b233f552e68cb7159bdaab0b111ea106a06965ad8fdd42a19487a6671227db33f911e24d2b792b95b4842c0b2f5c8183cff6466588
-Description: file manager for Patrone Linux
- Patrone File Manager is the file manager of Patrone Linux, in the image of
- Windows 11's File Explorer: tabs, the command bar, breadcrumbs, the
- navigation pane with Quick access, Home, Gallery and This PC, eight views,
- the details and preview panes, Windows-style right-click menus, Folder
- Options and Properties, and copying, moving and deleting with progress,
- conflict handling and undo. It works with the Recycle Bin (the trash),
- removable drives and network places through GIO. It also draws the
- desktop and the desktop bubble, which Patrone's taskbar hosts.
 
