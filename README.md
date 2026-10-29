@@ -23,10 +23,20 @@ newest version of each package:
   first-login setup (`gnome-initial-setup`). Their version is Ubuntu's plus
   `patroneN`.
 
-The index's `Origin` is `Patrone` and its `Label` `Patrone Linux`. Both stay
-as they are now that the system is PatroneOS (2026-10-29): apt stops
-updating from a repository whose Origin or Label changes until it's told to
-accept it, and `patrone.pref` matches on the Origin.
+The index's `Origin` is `Patrone`, and stays: `patrone.pref` matches on it,
+and apt stops updating from a repository whose Origin changes until it's
+told to accept it. Its `Label` is the system's name, which changes to
+PatroneOS in two steps, since apt treats a changed Label the same way:
+`patrone-desktop` 0.2.6 makes installs accept a new Label
+(`/etc/apt/apt.conf.d/51patrone-release-label`), and once that has reached
+them, `packaging/publish.sh` writes the new one (billsecond/patroneos#34).
+An install that missed 0.2.6 needs `sudo apt-get update
+--allow-releaseinfo-change` once.
+
+The pool keeps the files of the current index and the one before it, so an
+install that read yesterday's index can still download; older versions go
+at each publish. The current `.deb`s describe themselves as they were built,
+and each is replaced when its next version is published.
 
 ## How it's laid out
 
@@ -73,9 +83,13 @@ from branches. The daily check here is the watchdog for Ubuntu's updates.
 
 ## The key
 
-`Patrone Linux Archive (billsecond.github.io/patrone-apt)`, Ed25519, no
-expiry. The key keeps the name it was made with; changing it would mean
-signing a new identity onto it with its private key, on the dev VM.
+Ed25519, no expiry. Its name is its first one, from before the system was
+PatroneOS, until it gets a new one. That needs the private key, so it's done
+by hand on the dev VM: add the new name, revoke the old one, and export the
+public key without it into `patrone-archive-keyring.gpg` and `.asc` here and
+into patroneos's `desktop/apt/patrone-archive-keyring.gpg` (with a new
+`patrone-desktop` version). The fingerprint doesn't change, so installs go on
+trusting it.
 
 ```
 8FE6 1B83 753C 2636 CD74  0259 4FC3 52E3 D384 225F
