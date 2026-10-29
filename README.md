@@ -56,15 +56,17 @@ It uploads the new debs to the `pool` release, writes and signs the index,
 commits it here and pushes; Pages has it a minute or two later. A package
 already published at that version or newer is skipped.
 
-Nothing publishes Patrone Linux's `main` here by itself. After each merge
-there that bumps a package's version, build that package from `main` and
-publish it by name, as above (Patrone Linux's `packaging/README.md`,
-"Publishing", has the steps). Don't publish builds from branches.
-
-The dev VM also rebuilds GDM, GNOME Settings and first-login setup by itself
-whenever Ubuntu updates them, and publishes them
-(`packaging/ubuntu-updates.sh`, daily). The daily check here is the watchdog
-for that.
+Mostly, though, nobody runs it by hand. Once a day the dev VM publishes
+whatever on Patrone Linux's `main` has a newer version than this repository
+(`packaging/main-updates.sh`), so merges reach installs within a day. It
+also rebuilds GDM, GNOME Settings and first-login setup whenever Ubuntu
+updates them, and publishes them (`packaging/ubuntu-updates.sh`, which runs
+both). What fails there becomes an issue here; the issues about main's
+packages are titled "PACKAGE VERSION from main: ..." and close by themselves
+once that version is published. To publish a merge sooner, build it from
+`main` and publish it by name, as above (Patrone Linux's
+`packaging/README.md`, "Publishing", has the steps). Don't publish builds
+from branches. The daily check here is the watchdog for Ubuntu's updates.
 
 ## The key
 
