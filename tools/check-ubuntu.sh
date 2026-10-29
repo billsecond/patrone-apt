@@ -10,7 +10,7 @@
 # UBUNTU'S-NEWEST the newest Ubuntu has published for resolute in its release,
 # security or updates pocket (Launchpad's API; -proposed and backports don't
 # count). Used by the daily check (.github/workflows/check-ubuntu.yml) and by
-# the dev VM's rebuilds (packaging/ubuntu-updates.sh in Patrone Linux's
+# the dev VM's rebuilds (packaging/ubuntu-updates.sh in PatroneOS's
 # repository).
 #
 #   tools/check-ubuntu.sh [PACKAGES-FILE]

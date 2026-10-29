@@ -1,10 +1,10 @@
-# Patrone Linux packages
+# PatroneOS packages
 
-The apt repository Patrone Linux gets its own updates from, at
+The apt repository PatroneOS gets its own updates from, at
 <https://billsecond.github.io/patrone-apt>. GitHub hosts it (Pages for the
 index, a release for the files); Patrone runs no servers of its own.
 
-Patrone Linux installs have it since `patrone-desktop` 0.2.1, which installs the
+PatroneOS installs have it since `patrone-desktop` 0.2.1, which installs the
 source (`/etc/apt/sources.list.d/patrone.sources`), the key
 (`/usr/share/keyrings/patrone-archive-keyring.gpg`) and the pins that put
 Patrone's builds before Ubuntu's (`/etc/apt/preferences.d/patrone.pref`).
@@ -16,14 +16,27 @@ Updates arrive through Patrone Software and the daily automatic updates
 One suite, `resolute` (Ubuntu 26.04 LTS), component `main`, amd64, holding the
 newest version of each package:
 
-- Patrone's own packages: everything in Patrone Linux's `packaging/`.
+- Patrone's own packages: everything in PatroneOS's `packaging/`.
 - Patrone's builds of Ubuntu's packages that carry Patrone's changes: GDM
   (`gdm3`, `libgdm1`, `gir1.2-gdm-1.0`, `libgdm-dev`), GNOME Settings
   (`gnome-control-center` and its `-data`, `-dev` and `-faces`) and
   first-login setup (`gnome-initial-setup`). Their version is Ubuntu's plus
   `patroneN`.
 
-The index's `Origin` is `Patrone` and its `Label` `Patrone Linux`.
+The index's `Origin` is `Patrone`, and stays: `patrone.pref` matches on it,
+and apt stops updating from a repository whose Origin changes until it's
+told to accept it. Its `Label` is the system's name, which changes to
+PatroneOS in two steps, since apt treats a changed Label the same way:
+`patrone-desktop` 0.2.6 makes installs accept a new Label
+(`/etc/apt/apt.conf.d/51patrone-release-label`), and once that has reached
+them, `packaging/publish.sh` writes the new one (billsecond/patroneos#34).
+An install that missed 0.2.6 needs `sudo apt-get update
+--allow-releaseinfo-change` once.
+
+The pool keeps the files of the current index and the one before it, so an
+install that read yesterday's index can still download; older versions go
+at each publish. The current `.deb`s describe themselves as they were built,
+and each is replaced when its next version is published.
 
 ## How it's laid out
 
@@ -43,7 +56,7 @@ kept there.
 
 ## Publishing
 
-On the dev VM, from Patrone Linux's repository, after building:
+On the dev VM, from PatroneOS's repository, after building:
 
 ```
 ./packaging/publish.sh patrone-terminal       # its newest build in out/
@@ -57,21 +70,26 @@ commits it here and pushes; Pages has it a minute or two later. A package
 already published at that version or newer is skipped.
 
 Mostly, though, nobody runs it by hand. Once a day the dev VM publishes
-whatever on Patrone Linux's `main` has a newer version than this repository
+whatever on PatroneOS's `main` has a newer version than this repository
 (`packaging/main-updates.sh`), so merges reach installs within a day. It
 also rebuilds GDM, GNOME Settings and first-login setup whenever Ubuntu
 updates them, and publishes them (`packaging/ubuntu-updates.sh`, which runs
 both). What fails there becomes an issue here; the issues about main's
 packages are titled "PACKAGE VERSION from main: ..." and close by themselves
 once that version is published. To publish a merge sooner, build it from
-`main` and publish it by name, as above (Patrone Linux's
+`main` and publish it by name, as above (PatroneOS's
 `packaging/README.md`, "Publishing", has the steps). Don't publish builds
 from branches. The daily check here is the watchdog for Ubuntu's updates.
 
 ## The key
 
-`Patrone Linux Archive (billsecond.github.io/patrone-apt)`, Ed25519, no
-expiry:
+Ed25519, no expiry. Its name is its first one, from before the system was
+PatroneOS, until it gets a new one. That needs the private key, so it's done
+by hand on the dev VM: add the new name, revoke the old one, and export the
+public key without it into `patrone-archive-keyring.gpg` and `.asc` here and
+into patroneos's `desktop/apt/patrone-archive-keyring.gpg` (with a new
+`patrone-desktop` version). The fingerprint doesn't change, so installs go on
+trusting it.
 
 ```
 8FE6 1B83 753C 2636 CD74  0259 4FC3 52E3 D384 225F
