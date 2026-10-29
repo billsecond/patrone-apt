@@ -1,5 +1,5 @@
-# Patrone Linux's packages, from billsecond.github.io/patrone-apt (GitHub
-# Pages). Patrone Linux installs this file itself, with the key, as
+# PatroneOS's packages, from billsecond.github.io/patrone-apt (GitHub
+# Pages). PatroneOS installs this file itself, with the key, as
 # /etc/apt/sources.list.d/patrone.sources (package patrone-desktop).
 Types: deb
 URIs: https://billsecond.github.io/patrone-apt

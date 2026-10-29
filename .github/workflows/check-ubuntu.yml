@@ -3,7 +3,7 @@
 # (tools/check-ubuntu.sh), and keeps an issue open for each one Ubuntu has
 # updated since, until Patrone's rebuild is published. The dev VM rebuilds
 # and publishes them itself, also daily (packaging/ubuntu-updates.sh in
-# Patrone Linux's repository); an issue that stays open means that hasn't
+# PatroneOS's repository); an issue that stays open means that hasn't
 # happened, for instance while the VM is off, or that the build failed (the
 # VM then opens an issue of its own with the log).
 name: Check Ubuntu's updates
@@ -38,9 +38,9 @@ jobs:
                   --jq ".[] | select(.title | startswith(\"$source \")) | .number")
               title="$source $newest: Ubuntu's update isn't in Patrone's build yet"
               if [ "$state" = behind ]; then
-                  body="Ubuntu has published $source $newest for resolute ($pocket). Patrone's build is made from $built_from, so computers with Patrone Linux keep that one (Patrone's apt pinning) until it's built again from Ubuntu's new version.
+                  body="Ubuntu has published $source $newest for resolute ($pocket). Patrone's build is made from $built_from, so computers with PatroneOS keep that one (Patrone's apt pinning) until it's built again from Ubuntu's new version.
 
-          The dev VM does that by itself each day (packaging/ubuntu-updates.sh in Patrone Linux's repository, then packaging/publish.sh). This issue closes by itself once the rebuild is published. If it stays open, the VM may be off, or the build failed: look for an issue named \"Rebuilding $source ...\"."
+          The dev VM does that by itself each day (packaging/ubuntu-updates.sh in PatroneOS's repository, then packaging/publish.sh). This issue closes by itself once the rebuild is published. If it stays open, the VM may be off, or the build failed: look for an issue named \"Rebuilding $source ...\"."
                   if [ -z "$open" ]; then
                       gh issue create --label ubuntu-update --title "$title" --body "$body"
                   else
