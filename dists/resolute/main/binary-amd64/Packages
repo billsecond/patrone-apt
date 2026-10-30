@@ -589,35 +589,6 @@ Description: file manager for PatroneOS
  removable drives and network places through GIO. It also draws the
  desktop and the desktop files panel, which Patrone's taskbar hosts.
 
-Package: patrone-gnome-taskbar
-Architecture: all
-Version: 0.4.12
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 368
-Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
-Recommends: patrone-settings, patrone-file-manager (>= 0.3.10)
-Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone21), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.10), patrone-settings (<< 0.3.13)
-Filename: pool/main/patrone-gnome-taskbar_0.4.12_all.deb
-Size: 68416
-MD5sum: b4f927f652bf58c5e3271374b4445992
-SHA1: ddfde4f227410c491b6652557c288124b73e6b35
-SHA256: 245bd2b4227aeca69152a0d3430eeb771e873e30db95eef6ce83a97de77e14d4
-SHA512: 06826ef51c42c666d0d724cf86b8523670784071e36b84a1c2bfbb0722737c72c01f179d374b0d9924ef8a3b0bf43ff19af42634deafefd157e97154c43b7f7a
-Description: Patrone Desktop's taskbar, for its GNOME-based desktop
- A compact taskbar along the bottom of the screen, in place of GNOME's top
- bar, that works the way Windows users expect: the Patrone menu, where typing
- searches apps, settings and files at once, with "Search the web" for
- anything else; pinned apps and slots for the default web browser, terminal,
- file manager and mail app; running apps; right-click jump lists with recent
- files and tasks; and the system tray, clock and notifications. It hosts
- Patrone File Manager's desktop and the desktop files panel, and draws the
- Recycle Bin.
- .
- A GNOME Shell extension (patrone-taskbar@patroneos.com), on by default for
- every account, until Patrone's own shell replaces GNOME Shell.
-
 Package: patrone-remote-desktop
 Architecture: amd64
 Version: 0.5.10
@@ -787,4 +758,33 @@ Description: PatroneOS's fonts: Sans, Mono, Document, Serif and Classic
  Calibri to Document, and Arial and Helvetica to Classic), so those documents
  keep their layout. Noto Sans covers the scripts the fonts don't; Liberation
  Serif and Caladea stand in for the classic serif fonts.
+
+Package: patrone-gnome-taskbar
+Architecture: all
+Version: 0.4.13
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 369
+Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
+Recommends: patrone-settings, patrone-file-manager (>= 0.3.10)
+Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone21), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.10), patrone-settings (<< 0.3.13)
+Filename: pool/main/patrone-gnome-taskbar_0.4.13_all.deb
+Size: 68864
+MD5sum: c854a6eb11f20e4164dac2267c9ff851
+SHA1: a7ac02c9b90984c844f614b71679906585842b2d
+SHA256: ae36a49f32b18c05cbfcd70f7e2a5b1a1ea2cbec491717d480f7f218e9322746
+SHA512: 9135f3604afa3cd9925045456bed306284d5334bf47d2505a5b67e9edc71e108913e81f886097892e846a50eeca3381b19f301af07e5e4474cd1fd70a587675b
+Description: Patrone Desktop's taskbar, for its GNOME-based desktop
+ A compact taskbar along the bottom of the screen, in place of GNOME's top
+ bar, that works the way Windows users expect: the Patrone menu, where typing
+ searches apps, settings and files at once, with "Search the web" for
+ anything else; pinned apps and slots for the default web browser, terminal,
+ file manager and mail app; running apps; right-click jump lists with recent
+ files and tasks; and the system tray, clock and notifications. It hosts
+ Patrone File Manager's desktop and the desktop files panel, and draws the
+ Recycle Bin.
+ .
+ A GNOME Shell extension (patrone-taskbar@patroneos.com), on by default for
+ every account, until Patrone's own shell replaces GNOME Shell.
 
