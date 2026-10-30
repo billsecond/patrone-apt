@@ -69,153 +69,6 @@ Description: PatroneOS's fonts: Sans, Mono, Document, Serif and Classic
  keep their layout. Noto Sans covers the scripts the fonts don't; Liberation
  Serif and Caladea stand in for the classic serif fonts.
 
-Package: gdm3
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone3
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 5654
-Provides: x-display-manager
-Depends: accountsservice (>= 0.6.35), bash (>= 4.3), dconf-cli (>= 0.20), dconf-gsettings-backend (>= 0.20), dbus-bin | systemd-sysv, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone3), ubuntu-session | gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon (>= 3.37.0), gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 50.1-0ubuntu0.1patrone3), libglib2.0-bin (>= 2.35.0), libnss-systemd, libpam-modules (>= 0.72-1), libpam-runtime (>= 0.76-13.1), librsvg2-common, polkitd, procps, ucf, x11-common (>= 1:7.6+11), x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 232), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
-Recommends: at-spi2-core, ubuntu-session | gnome-session | x-session-manager, x11-xkb-utils, zenity
-Suggests: orca, libpam-fprintd (>= 0.8.0-2), libpam-sss (>= 2.3.0-1), libpam-pkcs11, libpam-gnome-keyring
-Breaks: gnome-remote-desktop (<< 50~rc)
-Filename: pool/main/gdm3_50.1-0ubuntu0.1patrone3_amd64.deb
-Size: 863254
-MD5sum: 49aced748c1975a63081bf1f83494b7c
-SHA1: ac486efcf32e5c610e2562279ab25713ca7b2ccb
-SHA256: 46e7c941800f94ebe5af5d39f4ada16780c383d375fe08999a16e28335791e8b
-SHA512: bf98ac65a348c95a82a3fabc0a4970b31de2e89433e6217f79fc9fbc05d7a771cc777f57b458c0f1d2da0e601ea4995d128239fac672fdcb42a24d091a92a9b8
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
-
-Package: gir1.2-gdm-1.0
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone3
-Priority: optional
-Section: introspection
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 66
-Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gobject-2.0, libgdm1 (>= 50~beta)
-Filename: pool/main/gir1.2-gdm-1.0_50.1-0ubuntu0.1patrone3_amd64.deb
-Size: 21492
-MD5sum: c33c81e886363836eb626545cb0d10b1
-SHA1: c97d9dacec03320444aaaa1e2606f9ec7a3df84c
-SHA256: 3a0864b72721c3f30c73ea74008a24f4bd5fb1979df834bf7f345404cf11e5ed
-SHA512: c53b8333cb73187a50e1d35140a69fb88817fc9ab02e611f42878b2ea4f21334e0af96c8de8a2d0371c7d8c6a85d62e509d4fdf9407eafda5edb90f99a995a21
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GObject introspection data for the GNOME Display Manager
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains introspection data for the GNOME Display Manager.
-
-Package: gnome-control-center-data
-Architecture: all
-Version: 1:50.3-0ubuntu0.2patrone19
-Multi-Arch: foreign
-Priority: optional
-Section: gnome
-Source: gnome-control-center
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 18096
-Depends: dconf-gsettings-backend | gsettings-backend
-Filename: pool/main/gnome-control-center-data_50.3-0ubuntu0.2patrone19_all.deb
-Size: 2978732
-MD5sum: 8c1ae81cb6b55e3d6c75c2fa8ab52b34
-SHA1: 1805a41ec15ac57b58f79cca283506278942014e
-SHA256: bf656b15d243fa8b12380b0f1da80ed39135397f510566c9fddc340f9bd732c1
-SHA512: 06c4fb5cdedeaa93a297e92b410bae74380800e4cedcd1cbeb4c0375653b0844d28f11c9c6dbb9a60670977e42d4ba1973efdeb192492414b43ae0ccf1c558e5
-Description: configuration applets for GNOME - data files
- This package contains data files (icons, pixmaps, locales files) needed by
- the configuration applets in the gnome-control-center package.
-
-Package: gnome-control-center-dev
-Architecture: all
-Version: 1:50.3-0ubuntu0.2patrone19
-Multi-Arch: foreign
-Priority: optional
-Section: devel
-Source: gnome-control-center
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 30
-Depends: gnome-control-center-data
-Filename: pool/main/gnome-control-center-dev_50.3-0ubuntu0.2patrone19_all.deb
-Size: 18422
-MD5sum: 4815aa7988a3ccc3e05b40ce6c87eb86
-SHA1: 53949e16933c6b9b145f247bb64438641beecd80
-SHA256: 9c24667f2a2746d249675f08eb6e06f87d26ca386ca0060a98742c9643ffd15a
-SHA512: 2d8d5f8cc9e6e447e9e858f4a4f636a028f41207131ec55719d50ad17446730f049ac9fc6b640e27d136eb67887a02ef0f89fcb2702b03e00ea9fdb2655f896a
-Description: utilities to configure the GNOME desktop
- This package contains the file required to get the keydirs location
-
-Package: gnome-control-center-faces
-Architecture: all
-Version: 1:50.3-0ubuntu0.2patrone19
-Multi-Arch: foreign
-Priority: optional
-Section: gnome
-Source: gnome-control-center
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 1129
-Provides: unity-control-center-faces
-Conflicts: unity-control-center-faces
-Replaces: unity-control-center-faces
-Filename: pool/main/gnome-control-center-faces_50.3-0ubuntu0.2patrone19_all.deb
-Size: 1115654
-MD5sum: 380696c3836ab33263e5bffc0de81a8a
-SHA1: d5f649f09a4f31d42f86cce58ad2747b0b84f0e2
-SHA256: e7313d6a0441cf922f0864629d4cff1fd131f2d4175ea12937d55e96b687e6f0
-SHA512: 15600c378c9760533497954fe645258acb6280f7a3b9a4d2c1968cf535cf675a4d4a8dcf731309c43f5a5b8be2e0c4ad9d2f500fa5231ee4a0be8afe622df959
-Description: utilities to configure the GNOME desktop - faces images
- This package contains images that can be used for user profile's icon
-
-Package: gnome-control-center
-Architecture: amd64
-Version: 1:50.3-0ubuntu0.2patrone19
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 4626
-Depends: accountsservice (>= 23.11.69), colord, desktop-file-utils, gnome-control-center-data (<< 1:51~), gnome-control-center-data (>= 1:50.3-0ubuntu0.2patrone19), gnome-desktop3-data, gnome-online-accounts (>= 3.51.0), gnome-settings-daemon (>= 48~rc), gsettings-desktop-schemas (>= 50~alpha), heif-gdk-pixbuf, heif-thumbnailer, language-selector-gnome (>= 0.179~), libjxl-gdk-pixbuf, mutter-common (>= 47), tecla (>= 47), upower, webp-pixbuf-loader, whoopsie-preferences, libaccountsservice0 (>= 23.13.9), libadwaita-1-0 (>= 1.8~alpha), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libcolord-gtk4-1t64 (>= 0.1.24), libcolord2 (>= 1.4.3), libcups2t64 (>= 1.7.0), libdrm2 (>= 2.4.3), libepoxy0 (>= 1.0), libfontconfig1 (>= 2.12.6), libgcr-4-4 (>= 3.8.0), libgdk-pixbuf-2.0-0 (>= 2.30.1), libglib2.0-0t64 (>= 2.83.0), libgnome-bg-4-2t64 (>= 3.27.90), libgnome-bluetooth-ui-3.0-13 (>= 42~beta), libgnome-desktop-4-2t64 (>= 3.33.4), libgnutls30t64 (>= 3.7.0), libgoa-1.0-0b (>= 3.51.0), libgoa-backend-1.0-2 (>= 3.51.0), libgraphene-1.0-0 (>= 1.5.4), libgsound0t64 (>= 1.0.1), libgtk-4-1 (>= 4.21), libgtop-2.0-11 (>= 2.22.3), libgudev-1.0-0 (>= 146), libibus-1.0-5 (>= 1.5.2), libinsights0 (>= 0.8.1), libjson-glib-1.0-0 (>= 1.5.2), libkrb5-3 (>= 1.8+dfsg), libmalcontent-0-0 (>= 0.14~alpha), libmm-glib0 (>= 1.16.6), libnm0 (>= 1.52.0), libnma-gtk4-0 (>= 1.10.2), libpango-1.0-0 (>= 1.37.2), libpolkit-gobject-1-0 (>= 0.99), libpulse-mainloop-glib0 (>= 0.99.1), libpulse0 (>= 0.99.1), libpwquality1 (>= 1.1.0), libsecret-1-0 (>= 0.7), libsmbclient0 (>= 2:4.0.3+dfsg1), libsoup-3.0-0 (>= 3.0.3), libudisks2-0 (>= 2.0.0), libupower-glib3 (>= 1.90.6), libwacom9 (>= 2.0.0), libwayland-client0 (>= 1.20.0), libwhoopsie-preferences0 (>= 0.9), libx11-6, libxml2-16 (>= 2.14.1)
-Recommends: cracklib-runtime, cups-pk-helper, fwupd, gnome-bluetooth-sendto, gnome-control-center-faces, gnome-remote-desktop (>= 47), gnome-user-docs, ibus, iso-codes, libcanberra-pulse, libspa-0.2-bluetooth | pulseaudio-module-bluetooth, mobile-broadband-provider-info, nm-connection-editor | network-manager-gnome (<< 1.36.0-3~), polkitd, power-profiles-daemon, rygel | rygel-tracker, system-config-printer-common
-Suggests: gnome-software | gnome-packagekit, gnome-user-share, gstreamer1.0-plugins-good (>= 1.18.0), malcontent-gui, realmd
-Breaks: gnome-remote-desktop (<< 42), gnome-shell (<< 49)
-Filename: pool/main/gnome-control-center_50.3-0ubuntu0.2patrone19_amd64.deb
-Size: 1887950
-MD5sum: 154c067c058fed08b8f6c3b1a8bd0c11
-SHA1: f9344d1f6428f0292e599420a4010ffa697fc3fd
-SHA256: fc185ff5a8fc576273ca95b33ca170a7fb913c9dfcc91d4d856cdcfb8e2ea009
-SHA512: 2b92f805a0399c19141216ec7d73c1a56150fda9b23c8e66030dc05ac7e11d7d76877538b64f6fe80f82fbc16d05c64734a55970fa29f67a6472ffc4356b80a4
-Description: utilities to configure the GNOME desktop
- This package contains configuration applets for the GNOME desktop,
- allowing to set accessibility configuration, desktop fonts, keyboard
- and mouse properties, sound setup, desktop theme and background, user
- interface properties, screen resolution, and other GNOME parameters.
- .
- It also contains a front end to these applets, which can also be
- accessed with the GNOME panel or the Nautilus file manager.
-
 Package: gnome-initial-setup
 Architecture: amd64
 Version: 50.0-0ubuntu7.1patrone5
@@ -291,101 +144,6 @@ Description: Language selector frontend for Ubuntu
  in Ubuntu.
  .
  This package contains the GTK+ frontend.
-
-Package: libgdm-dev
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone3
-Priority: optional
-Section: libdevel
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 711
-Provides: gir1.2-gdm-1.0-dev (= 50.1-0ubuntu0.1patrone3)
-Depends: gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone3), libgdm1 (= 50.1-0ubuntu0.1patrone3), libglib2.0-dev (>= 2.44.0), gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev
-Filename: pool/main/libgdm-dev_50.1-0ubuntu0.1patrone3_amd64.deb
-Size: 41816
-MD5sum: b8952e6a0e45bfc401ff69840dbcef8e
-SHA1: d6b74a0512a9d188216014a386281573c6ebf36f
-SHA256: 8e6e5d43378c4933ee95ffac4c4cb8fe64eee0b2676072eb5c5b8eca17f1eaf7
-SHA512: d97eeceeb6edb6b66d0d2933d37e198423473a55d3152b5d094dcfaf58c714ef54b8ec8f7f2dce83d79a100e461ac27d5e464b244c17c119290c9ecb9613b8c3
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager (development files)
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains header and development files.
-
-Package: libgdm1
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone3
-Priority: optional
-Section: libs
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 224
-Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.33), libglib2.0-0t64 (>= 2.83.0), libsystemd0 (>= 259)
-Filename: pool/main/libgdm1_50.1-0ubuntu0.1patrone3_amd64.deb
-Size: 60778
-MD5sum: ab45437e7471d372c979bf99a3ec2119
-SHA1: 11b607be85919dd084047d31d6752db4c3ef7bad
-SHA256: cc1f77f3eebd4592b810c4b202b3bdbe5a283b6d2e987cc8641ce66c2c67dd95
-SHA512: 246a4144fc517a38e40a1decd6f2ce86ed21142e32bb1db113e7e9b186d8b63ee502a1ef9d243c46f0770b9267a0e0d7f1df28c248c4990714e6794551fb78ec
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager (shared library)
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains the shared library required by gnome-shell.
-
-Package: patrone-branding
-Architecture: all
-Version: 0.1.25
-Priority: optional
-Section: misc
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 232200
-Provides: ubuntu-docs, ubuntu-wallpapers
-Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patroneos, plymouth-theme-spinner, plymouth-theme-ubuntu-text
-Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Filename: pool/main/patrone-branding_0.1.25_all.deb
-Size: 188834200
-MD5sum: 5f2975dd7f6f027411a2b44dd7141064
-SHA1: 0cf5d005dd2e771ecc322d01e1f19bc4727e3da1
-SHA256: 8ea6375989882b110bd16fa091de51aeb70410a53533d9e8bdb1990bc4c504e9
-SHA512: 66f110fc37e5b12982b957a8aaf8ecfaf422f15bbc76b37b118ddb56358ee486834a4f9bda9405e6c9f6a48be243dedcbd5a57125214c557f92fbbdb76739190
-Description: PatroneOS's name, logos and artwork
- Names the system PatroneOS and puts its logo where Ubuntu's was: the boot
- splash, the boot menu, the login screen, Settings > About, the text
- console's banner and the welcome message at login, which also loses Ubuntu's
- help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
- colors and a blue default avatar. PatroneOS's fonts are the system's:
- PatroneOS Sans for the desktop, apps and the login screen, PatroneOS
- Document for documents (LibreOffice's too), PatroneOS Mono for monospace
- text, and the plain sans-serif, serif and monospace fonts for apps and web
- pages, Chromium's included. It installs the Neon Horizon
- wallpaper as the default, light in the light style and dark in the dark
- one, with variants to choose from in Settings in place of Ubuntu's
- wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
- in place of Ubuntu's orange, gives the desktop, apps and the login screen
- Patrone's cursors (falling back to Adwaita's for any it lacks), turns
- Ubuntu's dock off by default, and sets up fastfetch with the PatroneOS logo.
- Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
- replaces ubuntu-docs), and the logo icons apps ask for (start-here and
- distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
- Yaru's icons. Removing the package puts Ubuntu's files back.
 
 Package: patrone-browser-chooser
 Architecture: amd64
@@ -479,60 +237,6 @@ Description: PatroneOS's desktop
  tree, ripgrep (rg) and fzf (finding files and text); bat (files with
  highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
 
-Package: patrone-file-manager
-Architecture: amd64
-Version: 0.3.8
-Priority: optional
-Section: utils
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 3024
-Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
-Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
-Filename: pool/main/patrone-file-manager_0.3.8_amd64.deb
-Size: 1215954
-MD5sum: 66c93a65000c4b389cd5e775d56caa15
-SHA1: 3cbdadb42dfcf4f6d0fc2472587fdbba71dc5679
-SHA256: 4a4a57f2c33338343d59bb6d3b2b1d6979ed4d1242e71d84d44b5b6fdcdafcd3
-SHA512: 380a378b580d7e437be7b99552e34dc63a24593c7cd5e0f7038ab905d9e06272e4351599f2ac18d7cff072f5a1bca9bbc130a037ea70420d43749afb0f67ff0f
-Description: file manager for PatroneOS
- Patrone File Manager is the file manager of PatroneOS, and it works
- the way Windows users expect: tabs, the command bar, breadcrumbs, the
- navigation pane with Quick access, Home, Gallery and Computer, eight views,
- the details and preview panes, full right-click menus, Folder Options and
- Properties, and copying, moving and deleting with progress, conflict
- handling and undo. It works with the Recycle Bin (the trash),
- removable drives and network places through GIO. It also draws the
- desktop and the desktop bubble, which Patrone's taskbar hosts.
-
-Package: patrone-gnome-taskbar
-Architecture: all
-Version: 0.4.10
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 354
-Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
-Recommends: patrone-settings, patrone-file-manager (>= 0.3.0)
-Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone17), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.0), patrone-settings (<< 0.3.9)
-Filename: pool/main/patrone-gnome-taskbar_0.4.10_all.deb
-Size: 64292
-MD5sum: 78dbd9dc71cf948238a047d3e0b91bbe
-SHA1: f234209f2112b00d1dd1cb25fa2e36316d6b4e10
-SHA256: 148de50cc336c9705225217900cd9478d0048e55048be51b414f91bb9f13163a
-SHA512: 5cfe43ca37742645889d58481b797dfa02a597de7319f9981d67832622327c2eebabdc400c425e4662e974443caaeed2f4452bb0ee6e17c85cef3bb0dc6f626d
-Description: Patrone Desktop's taskbar, for its GNOME-based desktop
- A compact taskbar along the bottom of the screen, in place of GNOME's top
- bar, that works the way Windows users expect: the Patrone menu, where typing
- searches apps, settings and files at once, with "Search the web" for
- anything else; pinned apps and slots for the default web browser, terminal,
- file manager and mail app; running apps; right-click jump lists with recent
- files and tasks; and the system tray, clock and notifications. It hosts
- Patrone File Manager's desktop and the desktop bubble, and draws the
- Recycle Bin.
- .
- A GNOME Shell extension (patrone-taskbar@patroneos.com), on by default for
- every account, until Patrone's own shell replaces GNOME Shell.
-
 Package: patrone-guest-tools
 Architecture: all
 Version: 0.1.1
@@ -599,20 +303,366 @@ Description: Virtual Machine Setup: gets PatroneOS ready for Hyper-V
  .
  Hyper-V and Windows are trademarks of the Microsoft group of companies.
 
+Package: patrone-software
+Architecture: all
+Version: 0.1.7
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 31
+Depends: gnome-software, gnome-software-plugin-flatpak
+Filename: pool/main/patrone-software_0.1.7_all.deb
+Size: 9780
+MD5sum: 6dd40845ee8b6b3e14cc85f990136239
+SHA1: 610ff7d9ae774e43b29fa0fd1d7f6afe2d051a58
+SHA256: ba85b9e5c9460cb7c0ac2fa3d8f7ea663f2ca55505a7a7d69262c0f4f2a0fda3
+SHA512: b6488cdfa5230aaa4a10da1d21f600365c6a0f4d3b23c18b33f65db7a4eb0d0359b869cb4da00e896dd43d3029c5e57a0aeedc0d289e5c76fdf878bf56f8a736
+Description: PatroneOS's app store: GNOME Software with Patrone's picks
+ GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
+ snap, which this removes when it's first installed). It finds apps in
+ Ubuntu's archive and on Flatpak remotes such as Flathub, and its Explore
+ page shows Patrone's own picks in place of GNOME's. It adds Patrone's app
+ index, which lists the Craft apps and installs them from their own GitHub
+ releases, and Flathub.
+ .
+ It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
+ browsed; installed snaps, such as Chromium, still update through snapd.
+
+Package: patrone-unpack
+Architecture: amd64
+Version: 0.1.2
+Priority: optional
+Section: utils
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 916
+Depends: libarchive13t64 (>= 3.4.0), libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), apt, flatpak, pkexec
+Filename: pool/main/patrone-unpack_0.1.2_amd64.deb
+Size: 406072
+MD5sum: f68319df51423233269f25cbf3e98b6d
+SHA1: 852d955e36b34c71797aa05e5ec281b271ee43fa
+SHA256: 273c2c01b7e28ee667bad0e3c572b2a6045f6ad0a0296e1d17b9df880867e9a7
+SHA512: c2c1ed74977f3fcb9dcad74d4a595d625f4ea2bb321d474136d41ebba2578e14ca34d696656c9eb497daf598ad9b258d38626c6e34f5a670dc8d052c74b2d5bc
+Description: Patrone's app for archives, .deb packages and Flatpak apps
+ Patrone Unpack opens zip, tar (gzip, xz, bzip2, zstd), 7z and rar
+ archives as folders, with Extract all and Extract here, and opens a
+ single file from one with a double-click. It also installs Flatpak apps
+ (.flatpak bundles, .flatpakref and .flatpakrepo files) for the account
+ that opens them, with no password, setting up Flathub when an app's
+ runtime comes from there, and .deb packages for everyone once an
+ administrator's password is given. It shows what each one is first: its
+ version, size, permissions or what else it needs.
+
+Package: gdm3
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone4
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 5654
+Provides: x-display-manager
+Depends: accountsservice (>= 0.6.35), bash (>= 4.3), dconf-cli (>= 0.20), dconf-gsettings-backend (>= 0.20), dbus-bin | systemd-sysv, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone4), ubuntu-session | gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon (>= 3.37.0), gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 50.1-0ubuntu0.1patrone4), libglib2.0-bin (>= 2.35.0), libnss-systemd, libpam-modules (>= 0.72-1), libpam-runtime (>= 0.76-13.1), librsvg2-common, polkitd, procps, ucf, x11-common (>= 1:7.6+11), x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 232), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
+Recommends: at-spi2-core, ubuntu-session | gnome-session | x-session-manager, x11-xkb-utils, zenity
+Suggests: orca, libpam-fprintd (>= 0.8.0-2), libpam-sss (>= 2.3.0-1), libpam-pkcs11, libpam-gnome-keyring
+Breaks: gnome-remote-desktop (<< 50~rc)
+Filename: pool/main/gdm3_50.1-0ubuntu0.1patrone4_amd64.deb
+Size: 863376
+MD5sum: 01f2186c641fc7ab2cac8883282bbe10
+SHA1: 5164e2e59865b3179ab838f92bd1e0f6c117a4c3
+SHA256: 064965d0c2e45589bec170248042dc1f233f0c3ac060b38e52d69b133f7fb76f
+SHA512: 8f6b7ff95d12fe3f32ce6e28ec3136f5f483b2a0ed9f9e0d4cc920db842bc5feef8b461406505fb9b0f55fbeaf27c1ac40665e3931d2d4970cad7eab9466b0ef
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+
+Package: gir1.2-gdm-1.0
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone4
+Priority: optional
+Section: introspection
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 66
+Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gobject-2.0, libgdm1 (>= 50~beta)
+Filename: pool/main/gir1.2-gdm-1.0_50.1-0ubuntu0.1patrone4_amd64.deb
+Size: 21554
+MD5sum: af865be037839af606e628da317dff72
+SHA1: 185f823a75c63e5f79582c2b81db760325debcad
+SHA256: 1656cbfb42f3727cb1fdab6f7b09f74a6ab9d1cd74ec4be9e9ca5751ac04bc38
+SHA512: 812536f49fd185daf1739556413b9384c103b2ba61ca1325498e02e9c24288c3ed9f5c7d123a009ffe4f7ff99dc5ee8b8f935301e5632305f5f4e45606c7e9a5
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GObject introspection data for the GNOME Display Manager
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains introspection data for the GNOME Display Manager.
+
+Package: gnome-control-center-data
+Architecture: all
+Version: 1:50.3-0ubuntu0.2patrone21
+Multi-Arch: foreign
+Priority: optional
+Section: gnome
+Source: gnome-control-center
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 18096
+Depends: dconf-gsettings-backend | gsettings-backend
+Filename: pool/main/gnome-control-center-data_50.3-0ubuntu0.2patrone21_all.deb
+Size: 2977854
+MD5sum: 179397ff078c70f279b8055d77ede930
+SHA1: 5422ff45a528b74cc00577537a24c6761c3913fe
+SHA256: 540942792b4c4dc606b337b9bba1537b50afa1353dbae43cc557866ac09b7d8c
+SHA512: a1ad4312cce165e253853b709559004bb84231a928981c3126063f0212d63c43a352bbcf2f2a4e23f4b101924fd220135b7abe78b14752391df4e67c1995f10c
+Description: configuration applets for GNOME - data files
+ This package contains data files (icons, pixmaps, locales files) needed by
+ the configuration applets in the gnome-control-center package.
+
+Package: gnome-control-center-dev
+Architecture: all
+Version: 1:50.3-0ubuntu0.2patrone21
+Multi-Arch: foreign
+Priority: optional
+Section: devel
+Source: gnome-control-center
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 30
+Depends: gnome-control-center-data
+Filename: pool/main/gnome-control-center-dev_50.3-0ubuntu0.2patrone21_all.deb
+Size: 18412
+MD5sum: 236f9da48508c9046e3a95105b9e9971
+SHA1: cb34665ebbc087b3a2e7e1b506b9af9e44480eff
+SHA256: 89cf4b00106e3a7e84748987478b90348a574d9cdc97b894186c73e1c8d6287f
+SHA512: 3bfbb9700b28356113c27b0e52888722e0ff0eb4aef53627bb5c0964f4766f7144e36b802d4b716e32d8a99a098126f09cf63676013f28e37a9050eef5bec417
+Description: utilities to configure the GNOME desktop
+ This package contains the file required to get the keydirs location
+
+Package: gnome-control-center-faces
+Architecture: all
+Version: 1:50.3-0ubuntu0.2patrone21
+Multi-Arch: foreign
+Priority: optional
+Section: gnome
+Source: gnome-control-center
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 1129
+Provides: unity-control-center-faces
+Conflicts: unity-control-center-faces
+Replaces: unity-control-center-faces
+Filename: pool/main/gnome-control-center-faces_50.3-0ubuntu0.2patrone21_all.deb
+Size: 1115652
+MD5sum: 375c834ee5e1fd19a35c2d79a8a8590a
+SHA1: 6baca30fbfd69dd64082639e27e49d693fbcd31e
+SHA256: 19f6db468cd290a453b7d7f2f3a3fe967849140f277a9a938167190e5af31e13
+SHA512: b52ceccf859bde0635536c6f86424d5e8c507d3dc2ef6a5b2c47e19e73bdf822cd1aca4c806607d321fc93b7efb094344b86d4d349b0707b59e80ff645e49e36
+Description: utilities to configure the GNOME desktop - faces images
+ This package contains images that can be used for user profile's icon
+
+Package: gnome-control-center
+Architecture: amd64
+Version: 1:50.3-0ubuntu0.2patrone21
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 4634
+Depends: accountsservice (>= 23.11.69), colord, desktop-file-utils, gnome-control-center-data (<< 1:51~), gnome-control-center-data (>= 1:50.3-0ubuntu0.2patrone21), gnome-desktop3-data, gnome-online-accounts (>= 3.51.0), gnome-settings-daemon (>= 48~rc), gsettings-desktop-schemas (>= 50~alpha), heif-gdk-pixbuf, heif-thumbnailer, language-selector-gnome (>= 0.179~), libjxl-gdk-pixbuf, mutter-common (>= 47), tecla (>= 47), upower, webp-pixbuf-loader, whoopsie-preferences, libaccountsservice0 (>= 23.13.9), libadwaita-1-0 (>= 1.8~alpha), libc6 (>= 2.38), libcairo2 (>= 1.2.4), libcolord-gtk4-1t64 (>= 0.1.24), libcolord2 (>= 1.4.3), libcups2t64 (>= 1.7.0), libdrm2 (>= 2.4.3), libepoxy0 (>= 1.0), libfontconfig1 (>= 2.12.6), libgcr-4-4 (>= 3.8.0), libgdk-pixbuf-2.0-0 (>= 2.30.1), libglib2.0-0t64 (>= 2.83.0), libgnome-bg-4-2t64 (>= 3.27.90), libgnome-bluetooth-ui-3.0-13 (>= 42~beta), libgnome-desktop-4-2t64 (>= 3.33.4), libgnutls30t64 (>= 3.7.0), libgoa-1.0-0b (>= 3.51.0), libgoa-backend-1.0-2 (>= 3.51.0), libgraphene-1.0-0 (>= 1.5.4), libgsound0t64 (>= 1.0.1), libgtk-4-1 (>= 4.21), libgtop-2.0-11 (>= 2.22.3), libgudev-1.0-0 (>= 146), libibus-1.0-5 (>= 1.5.2), libinsights0 (>= 0.8.1), libjson-glib-1.0-0 (>= 1.5.2), libkrb5-3 (>= 1.8+dfsg), libmalcontent-0-0 (>= 0.14~alpha), libmm-glib0 (>= 1.16.6), libnm0 (>= 1.52.0), libnma-gtk4-0 (>= 1.10.2), libpango-1.0-0 (>= 1.37.2), libpolkit-gobject-1-0 (>= 0.99), libpulse-mainloop-glib0 (>= 0.99.1), libpulse0 (>= 0.99.1), libpwquality1 (>= 1.1.0), libsecret-1-0 (>= 0.7), libsmbclient0 (>= 2:4.0.3+dfsg1), libsoup-3.0-0 (>= 3.0.3), libudisks2-0 (>= 2.0.0), libupower-glib3 (>= 1.90.6), libwacom9 (>= 2.0.0), libwayland-client0 (>= 1.20.0), libwhoopsie-preferences0 (>= 0.9), libx11-6, libxml2-16 (>= 2.14.1)
+Recommends: cracklib-runtime, cups-pk-helper, fwupd, gnome-bluetooth-sendto, gnome-control-center-faces, gnome-remote-desktop (>= 47), gnome-user-docs, ibus, iso-codes, libcanberra-pulse, libspa-0.2-bluetooth | pulseaudio-module-bluetooth, mobile-broadband-provider-info, nm-connection-editor | network-manager-gnome (<< 1.36.0-3~), polkitd, power-profiles-daemon, rygel | rygel-tracker, system-config-printer-common
+Suggests: gnome-software | gnome-packagekit, gnome-user-share, gstreamer1.0-plugins-good (>= 1.18.0), malcontent-gui, realmd
+Breaks: gnome-remote-desktop (<< 42), gnome-shell (<< 49)
+Filename: pool/main/gnome-control-center_50.3-0ubuntu0.2patrone21_amd64.deb
+Size: 1890740
+MD5sum: 479b1527cb5eeafacabea9e983e2c1cf
+SHA1: aa90b643284e2661318ba35de3453303275dbfa5
+SHA256: 365b9d1c945d37c7f53a6c013651336f17abb5434ac3b48cd2755688c91a4f82
+SHA512: 0a504339602bfa66612b6df352c3194f9d9ad98218058bf5aa767f0431c3c0d61b98b1f115925a84dd4eac1bd9f38ce9344f746f019af1adeb45a017c577f47e
+Description: utilities to configure the GNOME desktop
+ This package contains configuration applets for the GNOME desktop,
+ allowing to set accessibility configuration, desktop fonts, keyboard
+ and mouse properties, sound setup, desktop theme and background, user
+ interface properties, screen resolution, and other GNOME parameters.
+ .
+ It also contains a front end to these applets, which can also be
+ accessed with the GNOME panel or the Nautilus file manager.
+
+Package: libgdm-dev
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone4
+Priority: optional
+Section: libdevel
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 711
+Provides: gir1.2-gdm-1.0-dev (= 50.1-0ubuntu0.1patrone4)
+Depends: gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone4), libgdm1 (= 50.1-0ubuntu0.1patrone4), libglib2.0-dev (>= 2.44.0), gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev
+Filename: pool/main/libgdm-dev_50.1-0ubuntu0.1patrone4_amd64.deb
+Size: 41870
+MD5sum: 2a00a3865bcfd7bfce5de6ca95790201
+SHA1: 1df2e924213726ad21e223278d232bfa748a4d03
+SHA256: fa322e49dfd29fd8c753684fdd8ae9065be392057d16b238177560ea0c668f67
+SHA512: 6e88a7bda8eabda250adac979694d7e251e788a139711b9aee2c53f165b31f4182db0022f54953a5aae9693ad2ed2134848669d33afde5e4ebd336dc9b124aa8
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager (development files)
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains header and development files.
+
+Package: libgdm1
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone4
+Priority: optional
+Section: libs
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 224
+Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.33), libglib2.0-0t64 (>= 2.83.0), libsystemd0 (>= 259)
+Filename: pool/main/libgdm1_50.1-0ubuntu0.1patrone4_amd64.deb
+Size: 60902
+MD5sum: 458d1526427fa61ef495c42568107e8c
+SHA1: 9312e9047f4185d45786f0da1df33bd9ab99d65a
+SHA256: a57f41d42c0a9a1d98d9d52b20f50989e902009a93df59a43e3fdad4df94f639
+SHA512: 7515d271ccbaa0006eb031ba7f68d83f8dcf72bbbdbddbd544300d87a38477673d432f7d8bd9fa08bb553a1ab4118b81cae0fc520d627846351afc0da4f91a04
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager (shared library)
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains the shared library required by gnome-shell.
+
+Package: patrone-branding
+Architecture: all
+Version: 0.1.27
+Priority: optional
+Section: misc
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 282115
+Provides: ubuntu-docs, ubuntu-wallpapers
+Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patroneos, plymouth-theme-spinner, plymouth-theme-ubuntu-text
+Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Filename: pool/main/patrone-branding_0.1.27_all.deb
+Size: 222846970
+MD5sum: 82a93e3166f35021e208abeb34cf2d1d
+SHA1: 70f9a6b889e34fce92d467fe62be003514efefd1
+SHA256: 9e28b7a830138b0d8a499732b6d4ae16a4c369b48da5aaa0bdcdb2561d2858fb
+SHA512: 0f8c0781f7ad0b17b89ea3d3d945d007b7289a92d163ef3f43e5ac5c447345e935070a0a709277792af740f56f0f8b6c8ef98a6780aab0a566cd395c7a81bda4
+Description: PatroneOS's name, logos and artwork
+ Names the system PatroneOS and puts its logo where Ubuntu's was: the boot
+ splash, the boot menu, the login screen, Settings > About, the text
+ console's banner and the welcome message at login, which also loses Ubuntu's
+ help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
+ colors and a blue default avatar. PatroneOS's fonts are the system's:
+ PatroneOS Sans for the desktop, apps and the login screen, PatroneOS
+ Document for documents (LibreOffice's too), PatroneOS Mono for monospace
+ text, and the plain sans-serif, serif and monospace fonts for apps and web
+ pages, Chromium's included. It installs the Neon Horizon
+ wallpaper as the default, light in the light style and dark in the dark
+ one, with variants to choose from in Settings in place of Ubuntu's
+ wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
+ in place of Ubuntu's orange, gives the desktop, apps and the login screen
+ Patrone's cursors (falling back to Adwaita's for any it lacks), turns
+ Ubuntu's dock off by default, and sets up fastfetch with the PatroneOS logo.
+ Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
+ replaces ubuntu-docs), and the logo icons apps ask for (start-here and
+ distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
+ Yaru's icons. Removing the package puts Ubuntu's files back.
+
+Package: patrone-file-manager
+Architecture: amd64
+Version: 0.3.10
+Priority: optional
+Section: utils
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 3010
+Depends: libc6 (>= 2.39), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.44.6), dconf-gsettings-backend | gsettings-backend, gvfs, fonts-inter | fonts-noto-core
+Recommends: gvfs-backends, xdg-user-dirs, xdg-utils, pkexec, acl
+Breaks: patrone-gnome-taskbar (<< 0.4.12)
+Filename: pool/main/patrone-file-manager_0.3.10_amd64.deb
+Size: 1208392
+MD5sum: 25a2b083b99edbb50b37ab92a55ff131
+SHA1: 09597ab83d5bbc6e977f0c57a26c1324ff601ecf
+SHA256: 19c464ce147e4ee8c970fd261d40384556155992cb325a25cecb455c3dcd2839
+SHA512: 1383b65611bcf1f006360f5cdab8764405d5160ee91d3d6b60bddac268c2cd0dffb8730b84f9574ae3e50ab5900fc472e0907d00696387f88793edc2a4f8c748
+Description: file manager for PatroneOS
+ Patrone File Manager is the file manager of PatroneOS, and it works
+ the way Windows users expect: tabs, the command bar, breadcrumbs, the
+ navigation pane with Quick access, Home, Gallery and Computer, eight views,
+ the details and preview panes, full right-click menus, Folder Options and
+ Properties, and copying, moving and deleting with progress, conflict
+ handling and undo. It works with the Recycle Bin (the trash),
+ removable drives and network places through GIO. It also draws the
+ desktop and the desktop files panel, which Patrone's taskbar hosts.
+
+Package: patrone-gnome-taskbar
+Architecture: all
+Version: 0.4.12
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 368
+Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
+Recommends: patrone-settings, patrone-file-manager (>= 0.3.10)
+Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone21), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.10), patrone-settings (<< 0.3.13)
+Filename: pool/main/patrone-gnome-taskbar_0.4.12_all.deb
+Size: 68416
+MD5sum: b4f927f652bf58c5e3271374b4445992
+SHA1: ddfde4f227410c491b6652557c288124b73e6b35
+SHA256: 245bd2b4227aeca69152a0d3430eeb771e873e30db95eef6ce83a97de77e14d4
+SHA512: 06826ef51c42c666d0d724cf86b8523670784071e36b84a1c2bfbb0722737c72c01f179d374b0d9924ef8a3b0bf43ff19af42634deafefd157e97154c43b7f7a
+Description: Patrone Desktop's taskbar, for its GNOME-based desktop
+ A compact taskbar along the bottom of the screen, in place of GNOME's top
+ bar, that works the way Windows users expect: the Patrone menu, where typing
+ searches apps, settings and files at once, with "Search the web" for
+ anything else; pinned apps and slots for the default web browser, terminal,
+ file manager and mail app; running apps; right-click jump lists with recent
+ files and tasks; and the system tray, clock and notifications. It hosts
+ Patrone File Manager's desktop and the desktop files panel, and draws the
+ Recycle Bin.
+ .
+ A GNOME Shell extension (patrone-taskbar@patroneos.com), on by default for
+ every account, until Patrone's own shell replaces GNOME Shell.
+
 Package: patrone-remote-desktop
 Architecture: amd64
-Version: 0.5.7
+Version: 0.5.10
 Priority: optional
 Section: net
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 219
-Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libfreerdp-server-proxy3-3 (>= 3.0.0), libfreerdp3-3 (>= 3.16.0), libglib2.0-0t64 (>= 2.12.0), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwinpr3-3 (>= 3.17.0), libxkbcommon0 (>= 0.5.0), adduser, cage, freerdp-proxy, freerdp-sdl, gdm3, gnome-remote-desktop, iproute2, libpam-modules, libpam-runtime, openssl, pkexec, python3, util-linux, xkb-data
-Filename: pool/main/patrone-remote-desktop_0.5.7_amd64.deb
-Size: 59206
-MD5sum: 6503c11ca06af76f548421193957c8c2
-SHA1: 507846cff5780e7b04b92187b0ee0fdb4e145c98
-SHA256: ab780094ace24c24f56eaab0fd50a4335ae4bce0d3240ff0cda7aa611986a8e2
-SHA512: 7b393d618a4aa3f684dfad4cd4b5bea9ae3d2378c554c52227b96017ad5e77a305df1cda654203bcb74e229a09e17cb3ec1d63f492239a28fbfab9bd054f79ca
+Installed-Size: 220
+Depends: libc6 (>= 2.38), libcairo2 (>= 1.2.4), libfreerdp-server-proxy3-3 (>= 3.0.0), libfreerdp3-3 (>= 3.16.0), libglib2.0-0t64 (>= 2.12.0), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libwinpr3-3 (>= 3.17.0), libxkbcommon0 (>= 0.5.0), adduser, cage, freerdp-proxy, freerdp-sdl, gdm3, gnome-remote-desktop, iproute2, libpam-gnome-keyring, libpam-modules, libpam-runtime, openssl, pkexec, python3, util-linux, xkb-data
+Filename: pool/main/patrone-remote-desktop_0.5.10_amd64.deb
+Size: 60596
+MD5sum: 2c70056266fec368937eb438a2612038
+SHA1: 7120e5ab3126dd2296afb5c08492a8a54034ab92
+SHA256: e58fef3ae046277857f0c8b56ecbbed0ada8861ac5768b58496ff3908de6fa22
+SHA512: 44d9363b73dd33636d902c2849cb37f7c999eb08b18bc525b8efb178e82a0dab6c130b8afba61c15865eb375df3f574c2042c454ba493f3f4f8144b39d765dc9
 Description: Patrone's desktops: one per account, on the screen and remotely
  Each account has one desktop, which keeps running whether or not anyone is
  looking at it. The machine's own screen (the "Patrone Desktop" login
@@ -639,22 +689,22 @@ Description: Patrone's desktops: one per account, on the screen and remotely
 
 Package: patrone-settings
 Architecture: amd64
-Version: 0.3.11
+Version: 0.3.13
 Priority: optional
 Section: gnome
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 1082
-Depends: libc6 (>= 2.34), libcairo2 (>= 1.4.10), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.54.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), dconf-gsettings-backend | gsettings-backend, gsettings-desktop-schemas
+Installed-Size: 1321
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.4.10), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.31.1), libglib2.0-0t64 (>= 2.54.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), dconf-gsettings-backend | gsettings-backend, gsettings-desktop-schemas
 Recommends: patrone-gnome-taskbar, fonts-patroneos
-Filename: pool/main/patrone-settings_0.3.11_amd64.deb
-Size: 647160
-MD5sum: 8322bc986b0a08d9277c5a4a00cb03b2
-SHA1: 1fd94dfb064dd988af922fdc9f9b34007ab4a653
-SHA256: 8a5d009d3062844608186a54422627af72428f304599969a85f5960f3654aee8
-SHA512: 4f6f47c2c7ce94968e54bf2e4dc53fc150809cb44a8a0419ad5738113b426c8f7b9c6fde90df95dbd2b0ead559120e8e96a390b841c45e1497d49b2f8419e7d5
+Filename: pool/main/patrone-settings_0.3.13_amd64.deb
+Size: 779980
+MD5sum: 34cbb6d6426cb4a4bc951942522bce0e
+SHA1: 722f60f637d0d9b13a4af4c779dd6dd0a49b80e2
+SHA256: 84257d033a81ddf1270ad458132ee088305106ce984e4dcf85be3bd4868e115d
+SHA512: 08349dc3621134f4cfa2aefc6091530fbdea45b0094f2732deb26d05107f4321fb7220c7dfba257b6352c3c49e53d25d1f2adcf3aea140a8e211a7d7ee458cd6
 Description: Patrone's own settings: taskbar, desktop, theme, mouse pointer
  Patrone Settings has the settings Patrone adds to the desktop's own: the
- taskbar's size (small, medium or large) and layout, the desktop bubble,
+ taskbar's size (small, medium or large) and layout, where the desktop's files show,
  which corner of windows' title bars minimize, maximize and close go in,
  the theme, one of five looks for the taskbar, title bars and window
  buttons, the desktop's font, PatroneOS Sans or Noto Sans, and the mouse
@@ -662,67 +712,49 @@ Description: Patrone's own settings: taskbar, desktop, theme, mouse pointer
 
 Package: patrone-shell-config
 Architecture: all
-Version: 0.2.2
+Version: 0.3.1
 Priority: optional
 Section: shells
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 21
-Recommends: zsh, zsh-syntax-highlighting, zsh-autosuggestions
-Filename: pool/main/patrone-shell-config_0.2.2_all.deb
-Size: 5326
-MD5sum: 9b1e77dbcd682ddbe5788a22bce3a4b0
-SHA1: 8cc63a6ded37af9451a9aa52d3005e95bbf42d69
-SHA256: e7ea1c30ed35f064ac9c4a79d493d7263c2accb84406dba4b87e603d27d43cd3
-SHA512: 8e59547108fcd89bbee9a9a316d312ac928f06f3a936d28b3b791986ab0051aed4eefaec2420d41cf5b1020ef00a4329663d618ce17a12cf0518d5147bd03213
+Installed-Size: 35
+Recommends: command-not-found, zsh, zsh-syntax-highlighting, zsh-autosuggestions
+Filename: pool/main/patrone-shell-config_0.3.1_all.deb
+Size: 10582
+MD5sum: bd49f698eb22f9cb906a1c067a442970
+SHA1: a1e65598bd70816afc955dcdab070e5e2b2cc7bd
+SHA256: 1eca706313ff07c6ea57299a2d09bcdbb566ec2f9f4b612087dce443445938d1
+SHA512: 936a0c7bc042689dd011d0c9236fc8dda0ba3dde233e0d23087a17206937d93ac410dc38ab5cbfba10ef7040c26950b1d95714f80d0b817435e4dd18cc2d0f28
 Description: shell setup for PatroneOS users
  Gives bash, the default shell, Patrone's two-line prompt (blue for normal
  users, red for root), through a ~/.bash_aliases that new users get from
  /etc/skel, and root gets when the package is installed. For users who
  choose zsh, it also installs a .zshrc and .zprofile with the same prompt,
  syntax highlighting and suggestions from history.
-
-Package: patrone-software
-Architecture: all
-Version: 0.1.7
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 31
-Depends: gnome-software, gnome-software-plugin-flatpak
-Filename: pool/main/patrone-software_0.1.7_all.deb
-Size: 9780
-MD5sum: 6dd40845ee8b6b3e14cc85f990136239
-SHA1: 610ff7d9ae774e43b29fa0fd1d7f6afe2d051a58
-SHA256: ba85b9e5c9460cb7c0ac2fa3d8f7ea663f2ca55505a7a7d69262c0f4f2a0fda3
-SHA512: b6488cdfa5230aaa4a10da1d21f600365c6a0f4d3b23c18b33f65db7a4eb0d0359b869cb4da00e896dd43d3029c5e57a0aeedc0d289e5c76fdf878bf56f8a736
-Description: PatroneOS's app store: GNOME Software with Patrone's picks
- GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
- snap, which this removes when it's first installed). It finds apps in
- Ubuntu's archive and on Flatpak remotes such as Flathub, and its Explore
- page shows Patrone's own picks in place of GNOME's. It adds Patrone's app
- index, which lists the Craft apps and installs them from their own GitHub
- releases, and Flathub.
  .
- It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
- browsed; installed snaps, such as Chromium, still update through snapd.
+ Common Windows commands typed in a shell, from CMD and PowerShell, such as
+ ipconfig or Get-ChildItem, are refused with the Linux command to use
+ instead. It only prints: a program of that name always runs first, and any
+ other unknown command gets Ubuntu's usual suggestion of a package.
+ .
+ Windows and PowerShell are trademarks of the Microsoft group of companies.
 
 Package: patrone-task-manager
 Architecture: amd64
-Version: 0.2.3
+Version: 0.2.4
 Priority: optional
 Section: gnome
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 1198
+Installed-Size: 1202
 Depends: libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.54.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.12.0), libpango-1.0-0 (>= 1.14.0), dconf-cli
 Recommends: pkexec
 Conflicts: resources
 Replaces: resources
-Filename: pool/main/patrone-task-manager_0.2.3_amd64.deb
-Size: 507982
-MD5sum: 825647b6e75a9ac5159abf5dbbf43c12
-SHA1: 4b42ba599c9474763426a73d429cdfa672930e15
-SHA256: e929fce6df2197721d977f31148a5aca8525a90e67cd404b7f6ea64785bed81c
-SHA512: a75595453a33a2bb1486c5ee35f5bd540151b13b9e5d9eba5f7cb4baadb173edae530266d52a6f8cdbada0be38f15ddb1d52ef9e1505006567b6beb3a20e1be2
+Filename: pool/main/patrone-task-manager_0.2.4_amd64.deb
+Size: 510620
+MD5sum: bb4b6151f465afcb1e4a49f4ae0bbc29
+SHA1: 0506ba1e0d6ae58b6cdb6e1ea2713dfe43b72fc0
+SHA256: 1e011b951d3f8a1d71006dbf67c969ea476df9a36163f8392a61efbc641ce230
+SHA512: e2a805bce4863bfd205647e57b4c3f00408c359dd1f6c7714384f4acef4258f5d1980d4c0e2bd93c0120a9a715ab5a9841f8cc30c07b8f73db5906ac5c5ba009
 Description: Patrone's task manager: apps, processes, performance, services
  Patrone Task Manager shows the apps and processes running and what each
  uses (processor, memory, disk and network), and ends them; how hard the
@@ -736,47 +768,23 @@ Description: Patrone's task manager: apps, processes, performance, services
 
 Package: patrone-terminal
 Architecture: amd64
-Version: 0.1.8
+Version: 0.1.9
 Priority: optional
 Section: x11
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 552
+Installed-Size: 563
 Provides: x-terminal-emulator
 Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), libvte-2.91-gtk4-0 (>= 0.77.91), fonts-patroneos
 Recommends: patrone-shell-config
-Filename: pool/main/patrone-terminal_0.1.8_amd64.deb
-Size: 246680
-MD5sum: 3e49f7fad5fc0140512e335d8b2675c5
-SHA1: 9ce964ec27053af159bfe320c8c93a355d54918a
-SHA256: 386cafe51d7264a3cac4f36a1a44668353ef7516d7fd6dfa3e2a3ca0e934b521
-SHA512: 813e2d123e8a2cd4c2aea277a49b9a37fdb4bf0d1f32224864da8e7e8b19d98bf829bc40ab478a301cb328071db825740e5c1f4213e2b157879f2530e5b21fa8
+Filename: pool/main/patrone-terminal_0.1.9_amd64.deb
+Size: 251368
+MD5sum: b45d6427283d0c9fd1b962b5e1b252b0
+SHA1: fb7178c2f39d63cdcf04fe267d9c00415e2a88d5
+SHA256: 52388a7be989ece9dbd7c47c7724ae06923aa3474388489d67d6b2e98fe5e408
+SHA512: e316e704e6321b4fb2f8ee0793d2f74c159a300cc73e8179422de710749a7f94399a85763555b120a048be903ff7deea266bb3f653e3072f69f89c0e03d0f451
 Description: terminal emulator for PatroneOS
  Patrone Terminal is the default terminal of PatroneOS, built on GTK 4
  and VTE. It copies selected text to the clipboard, pastes with a
  right-click, opens links with Ctrl+click, and has tabs and a dark theme in
  the Patrone colors.
-
-Package: patrone-unpack
-Architecture: amd64
-Version: 0.1.2
-Priority: optional
-Section: utils
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 916
-Depends: libarchive13t64 (>= 3.4.0), libc6 (>= 2.39), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.14.0), apt, flatpak, pkexec
-Filename: pool/main/patrone-unpack_0.1.2_amd64.deb
-Size: 406072
-MD5sum: f68319df51423233269f25cbf3e98b6d
-SHA1: 852d955e36b34c71797aa05e5ec281b271ee43fa
-SHA256: 273c2c01b7e28ee667bad0e3c572b2a6045f6ad0a0296e1d17b9df880867e9a7
-SHA512: c2c1ed74977f3fcb9dcad74d4a595d625f4ea2bb321d474136d41ebba2578e14ca34d696656c9eb497daf598ad9b258d38626c6e34f5a670dc8d052c74b2d5bc
-Description: Patrone's app for archives, .deb packages and Flatpak apps
- Patrone Unpack opens zip, tar (gzip, xz, bzip2, zstd), 7z and rar
- archives as folders, with Extract all and Extract here, and opens a
- single file from one with a double-click. It also installs Flatpak apps
- (.flatpak bundles, .flatpakref and .flatpakrepo files) for the account
- that opens them, with no password, setting up Flathub when an app's
- runtime comes from there, and .deb packages for everyone once an
- administrator's password is given. It shows what each one is first: its
- version, size, permissions or what else it needs.
 
