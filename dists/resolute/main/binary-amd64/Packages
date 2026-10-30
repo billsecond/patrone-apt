@@ -525,44 +525,6 @@ Description: GNOME Display Manager (shared library)
  .
  This package contains the shared library required by gnome-shell.
 
-Package: patrone-branding
-Architecture: all
-Version: 0.1.27
-Priority: optional
-Section: misc
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 282115
-Provides: ubuntu-docs, ubuntu-wallpapers
-Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patroneos, plymouth-theme-spinner, plymouth-theme-ubuntu-text
-Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
-Filename: pool/main/patrone-branding_0.1.27_all.deb
-Size: 222846970
-MD5sum: 82a93e3166f35021e208abeb34cf2d1d
-SHA1: 70f9a6b889e34fce92d467fe62be003514efefd1
-SHA256: 9e28b7a830138b0d8a499732b6d4ae16a4c369b48da5aaa0bdcdb2561d2858fb
-SHA512: 0f8c0781f7ad0b17b89ea3d3d945d007b7289a92d163ef3f43e5ac5c447345e935070a0a709277792af740f56f0f8b6c8ef98a6780aab0a566cd395c7a81bda4
-Description: PatroneOS's name, logos and artwork
- Names the system PatroneOS and puts its logo where Ubuntu's was: the boot
- splash, the boot menu, the login screen, Settings > About, the text
- console's banner and the welcome message at login, which also loses Ubuntu's
- help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
- colors and a blue default avatar. PatroneOS's fonts are the system's:
- PatroneOS Sans for the desktop, apps and the login screen, PatroneOS
- Document for documents (LibreOffice's too), PatroneOS Mono for monospace
- text, and the plain sans-serif, serif and monospace fonts for apps and web
- pages, Chromium's included. It installs the Neon Horizon
- wallpaper as the default, light in the light style and dark in the dark
- one, with variants to choose from in Settings in place of Ubuntu's
- wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
- in place of Ubuntu's orange, gives the desktop, apps and the login screen
- Patrone's cursors (falling back to Adwaita's for any it lacks), turns
- Ubuntu's dock off by default, and sets up fastfetch with the PatroneOS logo.
- Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
- replaces ubuntu-docs), and the logo icons apps ask for (start-here and
- distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
- Yaru's icons. Removing the package puts Ubuntu's files back.
-
 Package: patrone-file-manager
 Architecture: amd64
 Version: 0.3.10
@@ -759,9 +721,47 @@ Description: PatroneOS's fonts: Sans, Mono, Document, Serif and Classic
  keep their layout. Noto Sans covers the scripts the fonts don't; Liberation
  Serif and Caladea stand in for the classic serif fonts.
 
+Package: patrone-branding
+Architecture: all
+Version: 0.1.28
+Priority: optional
+Section: misc
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 282115
+Provides: ubuntu-docs, ubuntu-wallpapers
+Depends: dconf-gsettings-backend | gsettings-backend, adwaita-icon-theme, fonts-noto-core, fonts-patroneos, plymouth-theme-spinner, plymouth-theme-ubuntu-text
+Conflicts: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Replaces: ubuntu-docs, ubuntu-wallpapers, ubuntu-wallpapers-resolute
+Filename: pool/main/patrone-branding_0.1.28_all.deb
+Size: 222846486
+MD5sum: 033edd055f135a84ba6a435df896e063
+SHA1: 52c4772b7541da756a0de8dae1f08621fc94274a
+SHA256: c897950c2172311569a1816d90e5fca0268e1eb08a063a3fd43ae4dcf7cf24da
+SHA512: b4e17a9be58566aa8711a8e1c188c8b89984aa6360ab329da29a17cfea05b1b8d35978c9261f74f65dfecc438b06e0095040d1390206ff8a06c5e9765b9e2623
+Description: PatroneOS's name, logos and artwork
+ Names the system PatroneOS and puts its logo where Ubuntu's was: the boot
+ splash, the boot menu, the login screen, Settings > About, the text
+ console's banner and the welcome message at login, which also loses Ubuntu's
+ help links, news and Ubuntu Pro advertising. The login screen gets Patrone's
+ colors and a blue default avatar. PatroneOS's fonts are the system's:
+ PatroneOS Sans for the desktop, apps and the login screen, PatroneOS
+ Document for documents (LibreOffice's too), PatroneOS Mono for monospace
+ text, and the plain sans-serif, serif and monospace fonts for apps and web
+ pages, Chromium's included. It installs the Neon Horizon
+ wallpaper as the default, light in the light style and dark in the dark
+ one, with variants to choose from in Settings in place of Ubuntu's
+ wallpapers (it replaces ubuntu-wallpapers), makes blue the accent color
+ in place of Ubuntu's orange, gives the desktop, apps and the login screen
+ Patrone's cursors (falling back to Adwaita's for any it lacks), turns
+ Ubuntu's dock off by default, and sets up fastfetch with the PatroneOS logo.
+ Help is GNOME Help, with GNOME's own front page in place of Ubuntu's (it
+ replaces ubuntu-docs), and the logo icons apps ask for (start-here and
+ distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
+ Yaru's icons. Removing the package puts Ubuntu's files back.
+
 Package: patrone-gnome-taskbar
 Architecture: all
-Version: 0.4.13
+Version: 0.4.14
 Priority: optional
 Section: gnome
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
@@ -769,12 +769,12 @@ Installed-Size: 369
 Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
 Recommends: patrone-settings, patrone-file-manager (>= 0.3.10)
 Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone21), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.10), patrone-settings (<< 0.3.13)
-Filename: pool/main/patrone-gnome-taskbar_0.4.13_all.deb
-Size: 68864
-MD5sum: c854a6eb11f20e4164dac2267c9ff851
-SHA1: a7ac02c9b90984c844f614b71679906585842b2d
-SHA256: ae36a49f32b18c05cbfcd70f7e2a5b1a1ea2cbec491717d480f7f218e9322746
-SHA512: 9135f3604afa3cd9925045456bed306284d5334bf47d2505a5b67e9edc71e108913e81f886097892e846a50eeca3381b19f301af07e5e4474cd1fd70a587675b
+Filename: pool/main/patrone-gnome-taskbar_0.4.14_all.deb
+Size: 68888
+MD5sum: 9ab6fb9aec68d0f40ed4b10f7db8f099
+SHA1: 94e95a10cf95d43b0452c32bd3c329ec71bba469
+SHA256: 436d88e45b86c5e10562b83927ddf3403419275ddf449d0de2cfcf13137deca5
+SHA512: 216365799b30e68193a64cc1d42e484b3e8a1c38b88219694b3618987a61b846aefa7a4fd11fac6f298ddcd704f1a0a075c655db36d508118ccd451bae2323a7
 Description: Patrone Desktop's taskbar, for its GNOME-based desktop
  A compact taskbar along the bottom of the screen, in place of GNOME's top
  bar, that works the way Windows users expect: the Patrone menu, where typing
