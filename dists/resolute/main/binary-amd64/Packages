@@ -321,63 +321,6 @@ Description: Patrone's app for archives, .deb packages and Flatpak apps
  administrator's password is given. It shows what each one is first: its
  version, size, permissions or what else it needs.
 
-Package: gdm3
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone4
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 5654
-Provides: x-display-manager
-Depends: accountsservice (>= 0.6.35), bash (>= 4.3), dconf-cli (>= 0.20), dconf-gsettings-backend (>= 0.20), dbus-bin | systemd-sysv, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone4), ubuntu-session | gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon (>= 3.37.0), gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 50.1-0ubuntu0.1patrone4), libglib2.0-bin (>= 2.35.0), libnss-systemd, libpam-modules (>= 0.72-1), libpam-runtime (>= 0.76-13.1), librsvg2-common, polkitd, procps, ucf, x11-common (>= 1:7.6+11), x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 232), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
-Recommends: at-spi2-core, ubuntu-session | gnome-session | x-session-manager, x11-xkb-utils, zenity
-Suggests: orca, libpam-fprintd (>= 0.8.0-2), libpam-sss (>= 2.3.0-1), libpam-pkcs11, libpam-gnome-keyring
-Breaks: gnome-remote-desktop (<< 50~rc)
-Filename: pool/main/gdm3_50.1-0ubuntu0.1patrone4_amd64.deb
-Size: 863376
-MD5sum: 01f2186c641fc7ab2cac8883282bbe10
-SHA1: 5164e2e59865b3179ab838f92bd1e0f6c117a4c3
-SHA256: 064965d0c2e45589bec170248042dc1f233f0c3ac060b38e52d69b133f7fb76f
-SHA512: 8f6b7ff95d12fe3f32ce6e28ec3136f5f483b2a0ed9f9e0d4cc920db842bc5feef8b461406505fb9b0f55fbeaf27c1ac40665e3931d2d4970cad7eab9466b0ef
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
-
-Package: gir1.2-gdm-1.0
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone4
-Priority: optional
-Section: introspection
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 66
-Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gobject-2.0, libgdm1 (>= 50~beta)
-Filename: pool/main/gir1.2-gdm-1.0_50.1-0ubuntu0.1patrone4_amd64.deb
-Size: 21554
-MD5sum: af865be037839af606e628da317dff72
-SHA1: 185f823a75c63e5f79582c2b81db760325debcad
-SHA256: 1656cbfb42f3727cb1fdab6f7b09f74a6ab9d1cd74ec4be9e9ca5751ac04bc38
-SHA512: 812536f49fd185daf1739556413b9384c103b2ba61ca1325498e02e9c24288c3ed9f5c7d123a009ffe4f7ff99dc5ee8b8f935301e5632305f5f4e45606c7e9a5
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GObject introspection data for the GNOME Display Manager
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains introspection data for the GNOME Display Manager.
-
 Package: gnome-control-center-data
 Architecture: all
 Version: 1:50.3-0ubuntu0.2patrone21
@@ -467,63 +410,6 @@ Description: utilities to configure the GNOME desktop
  .
  It also contains a front end to these applets, which can also be
  accessed with the GNOME panel or the Nautilus file manager.
-
-Package: libgdm-dev
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone4
-Priority: optional
-Section: libdevel
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 711
-Provides: gir1.2-gdm-1.0-dev (= 50.1-0ubuntu0.1patrone4)
-Depends: gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone4), libgdm1 (= 50.1-0ubuntu0.1patrone4), libglib2.0-dev (>= 2.44.0), gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev
-Filename: pool/main/libgdm-dev_50.1-0ubuntu0.1patrone4_amd64.deb
-Size: 41870
-MD5sum: 2a00a3865bcfd7bfce5de6ca95790201
-SHA1: 1df2e924213726ad21e223278d232bfa748a4d03
-SHA256: fa322e49dfd29fd8c753684fdd8ae9065be392057d16b238177560ea0c668f67
-SHA512: 6e88a7bda8eabda250adac979694d7e251e788a139711b9aee2c53f165b31f4182db0022f54953a5aae9693ad2ed2134848669d33afde5e4ebd336dc9b124aa8
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager (development files)
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains header and development files.
-
-Package: libgdm1
-Architecture: amd64
-Version: 50.1-0ubuntu0.1patrone4
-Priority: optional
-Section: libs
-Source: gdm3
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 224
-Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.33), libglib2.0-0t64 (>= 2.83.0), libsystemd0 (>= 259)
-Filename: pool/main/libgdm1_50.1-0ubuntu0.1patrone4_amd64.deb
-Size: 60902
-MD5sum: 458d1526427fa61ef495c42568107e8c
-SHA1: 9312e9047f4185d45786f0da1df33bd9ab99d65a
-SHA256: a57f41d42c0a9a1d98d9d52b20f50989e902009a93df59a43e3fdad4df94f639
-SHA512: 7515d271ccbaa0006eb031ba7f68d83f8dcf72bbbdbddbd544300d87a38477673d432f7d8bd9fa08bb553a1ab4118b81cae0fc520d627846351afc0da4f91a04
-Homepage: https://wiki.gnome.org/Projects/GDM/
-Description: GNOME Display Manager (shared library)
- GDM provides the equivalent of a "login:" prompt for X displays: it
- asks for a login and starts graphical sessions.
- .
- It supports multiple seats and switching between multiple users.
- .
- The greeter is based on the GNOME libraries and applications, and its
- look and design are the same as those of a GNOME session.
- .
- This package contains the shared library required by gnome-shell.
 
 Package: patrone-file-manager
 Architecture: amd64
@@ -787,4 +673,118 @@ Description: PatroneOS's name, logos and artwork
  replaces ubuntu-docs), and the logo icons apps ask for (start-here and
  distributor-logo) are Patrone's P in place of Ubuntu's, in every color of
  Yaru's icons. Removing the package puts Ubuntu's files back.
+
+Package: gdm3
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone5
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 5654
+Provides: x-display-manager
+Depends: accountsservice (>= 0.6.35), bash (>= 4.3), dconf-cli (>= 0.20), dconf-gsettings-backend (>= 0.20), dbus-bin | systemd-sysv, default-dbus-system-bus | dbus-system-bus, default-logind | logind, gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone5), ubuntu-session | gnome-session | x-session-manager | x-window-manager | x-terminal-emulator, gnome-session-bin (>= 50~alpha), gnome-session-common (>= 50~alpha), gnome-settings-daemon (>= 3.37.0), gnome-shell (>= 50~alpha), gsettings-desktop-schemas, libgdm1 (= 50.1-0ubuntu0.1patrone5), libglib2.0-bin (>= 2.35.0), libnss-systemd, libpam-modules (>= 0.72-1), libpam-runtime (>= 0.76-13.1), librsvg2-common, polkitd, procps, ucf, x11-common (>= 1:7.6+11), x11-xserver-utils, debconf (>= 0.5) | debconf-2.0, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.55), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libglib2.0-0t64 (>= 2.83.0), libgudev-1.0-0 (>= 232), libjson-glib-1.0-0 (>= 1.5.2), libkeyutils1 (>= 1.5.9), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99), libselinux1 (>= 3.1~), libsystemd0 (>= 259), libxau6 (>= 1:1.0.11)
+Recommends: at-spi2-core, ubuntu-session | gnome-session | x-session-manager, x11-xkb-utils, zenity
+Suggests: orca, libpam-fprintd (>= 0.8.0-2), libpam-sss (>= 2.3.0-1), libpam-pkcs11, libpam-gnome-keyring
+Breaks: gnome-remote-desktop (<< 50~rc)
+Filename: pool/main/gdm3_50.1-0ubuntu0.1patrone5_amd64.deb
+Size: 863446
+MD5sum: 79f478969dd912f0e6420c510f27c087
+SHA1: 9e49335d8d432e2a942e374af6a9f092dfff5192
+SHA256: ce50f16e1d1ae0d4563727c0142db0dcbe84a0513488baebd747311f831c4dc9
+SHA512: 97b7514ba4c78c3b633121061213cfffd97362b82257ff4efa5887a06b2eaae0c0c9ccce67f1365a4e6730e3fdf9488d7a9fbea91a682dbf0afe1bb38dce3505
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+
+Package: gir1.2-gdm-1.0
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone5
+Priority: optional
+Section: introspection
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 66
+Depends: gir1.2-gio-2.0, gir1.2-glib-2.0, gir1.2-gobject-2.0, libgdm1 (>= 50~beta)
+Filename: pool/main/gir1.2-gdm-1.0_50.1-0ubuntu0.1patrone5_amd64.deb
+Size: 21554
+MD5sum: a13111be9e0b9b22a538339360e72991
+SHA1: 4603bfe5f07fa707a247254fd924bb02e0eee41f
+SHA256: 8234a30736f845cee1cbae1ed47ef24df7fbadab2f7bd48d5a15756a5d7a0c7e
+SHA512: c0d4421484b8ded0763610ebd7f215f1ab290566b0a5486c513f922a46652b6f53d90fb2ecc5c103921d520e14c594ebaa51bb27763d5f898d0b7fa5b485443b
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GObject introspection data for the GNOME Display Manager
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains introspection data for the GNOME Display Manager.
+
+Package: libgdm-dev
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone5
+Priority: optional
+Section: libdevel
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 711
+Provides: gir1.2-gdm-1.0-dev (= 50.1-0ubuntu0.1patrone5)
+Depends: gir1.2-gdm-1.0 (= 50.1-0ubuntu0.1patrone5), libgdm1 (= 50.1-0ubuntu0.1patrone5), libglib2.0-dev (>= 2.44.0), gir1.2-gio-2.0-dev, gir1.2-glib-2.0-dev, gir1.2-gobject-2.0-dev
+Filename: pool/main/libgdm-dev_50.1-0ubuntu0.1patrone5_amd64.deb
+Size: 41874
+MD5sum: aeba06bb6da6531346b111a210f1a306
+SHA1: fccd09952d73c4cbeb233f256cc3c9b89c60870f
+SHA256: 6a27f501a745e536c62f2702770ef9d48204992315ab39301a0d9892f535d0cf
+SHA512: c914668437f0bbe48ca4cf0e12a8170001b151856b2f06c2d824aea76aa673d9b17526a8fadbb9c931a54746afdd1b43ed355c25b453452732e4289d5eaa4806
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager (development files)
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains header and development files.
+
+Package: libgdm1
+Architecture: amd64
+Version: 50.1-0ubuntu0.1patrone5
+Priority: optional
+Section: libs
+Source: gdm3
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 224
+Depends: dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.33), libglib2.0-0t64 (>= 2.83.0), libsystemd0 (>= 259)
+Filename: pool/main/libgdm1_50.1-0ubuntu0.1patrone5_amd64.deb
+Size: 60844
+MD5sum: 12bd882a689be8f7f86de187644cc302
+SHA1: 25c4683e229761a2d1e5083ac50990f6cedf1b47
+SHA256: b20bfeec642d17467944aedce2640909d773c0d8eb639189c039837ad9a310d3
+SHA512: 76fa0f6077421af37f64d975b0dd6346be70ed69fc7122526f906e45c5fa534189790293c70deab2f91f5e45f8550a7f457999ef2c1bd926d867b408a16b85fc
+Homepage: https://wiki.gnome.org/Projects/GDM/
+Description: GNOME Display Manager (shared library)
+ GDM provides the equivalent of a "login:" prompt for X displays: it
+ asks for a login and starts graphical sessions.
+ .
+ It supports multiple seats and switching between multiple users.
+ .
+ The greeter is based on the GNOME libraries and applications, and its
+ look and design are the same as those of a GNOME session.
+ .
+ This package contains the shared library required by gnome-shell.
 
