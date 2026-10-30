@@ -4,31 +4,31 @@ Hash: SHA512
 Architectures: amd64
 Codename: resolute
 Components: main
-Date: Fri, 30 Oct 2026 18:54:33 +0000
+Date: Fri, 30 Oct 2026 19:08:22 +0000
 Description: PatroneOS's packages, for Ubuntu 26.04 LTS
 Label: Patrone Linux
 Origin: Patrone
 Suite: resolute
 MD5Sum:
- b344dcce2201aa0512809b30c3f2aa22            48095 main/binary-amd64/Packages
- 1c566d71c8c74dbe28e690d1fa202366            17065 main/binary-amd64/Packages.gz
- 6ae12a20468787e1ec22a55239f04eae            15692 main/binary-amd64/Packages.xz
+ 05dfe0a558ba0cac5a896ed933502472            48095 main/binary-amd64/Packages
+ 29baeff1612981f59003f49b610e03a6            17091 main/binary-amd64/Packages.gz
+ 654adb03981e0f3eda449d192ca965dc            15700 main/binary-amd64/Packages.xz
 SHA1:
- 89612a1d8d9c6bec255676efa3267079c5dcca83            48095 main/binary-amd64/Packages
- 1f7fe1a6c0be8b5180c43ee5ed344f3e71b43240            17065 main/binary-amd64/Packages.gz
- 5d42054d1eee00ba9ad7d131b15db50ed7ebf257            15692 main/binary-amd64/Packages.xz
+ 736e8a746c516bf57c154ec1af487f59cd73fa9e            48095 main/binary-amd64/Packages
+ b03978c504c62084513c739431b1e5bd8e20252c            17091 main/binary-amd64/Packages.gz
+ 6a67b877e308612639dc44d664b0fd44dafa985e            15700 main/binary-amd64/Packages.xz
 SHA256:
- 9b51cb89bd3ad46a08a758952da3e2f7017f65a2c718e7816bbb262850621644            48095 main/binary-amd64/Packages
- 91ce9b87144b0a9eb0c13f7213a561092fbd39a43c491aa7ff1fae1d5dbc2843            17065 main/binary-amd64/Packages.gz
- 139ae79af74db6ead6177024b9fee45603b402dc75435aff619c9b1fcd6f5202            15692 main/binary-amd64/Packages.xz
+ a46fa8e7778547842cebe84a267a4b444cf605eab903ec8787cc34040ffed1d3            48095 main/binary-amd64/Packages
+ b69e6a68407aabfbffb0ffad04e2839a63b8f876272f8db3a7fffd5757a22c2a            17091 main/binary-amd64/Packages.gz
+ 33e329a831b6cbbd4bb44831420a17e8366c6cfee38ed7e3d009b3dfc2d2864c            15700 main/binary-amd64/Packages.xz
 SHA512:
- dd32276838307c962fdebd08951848d3fa438fbed9606bb96efb976d86b571ac9659b59b20afa8b8254b6eb61e7628842401ec3cb1d45666dce87f82f6b7066f            48095 main/binary-amd64/Packages
- 2ed992bed7a812b0c715ba46da802f9fcdf9b382365e28395f3bdc395c84535d6cf58f2c019a9c8a634a2e67e54c8475267ce1a11aea05c7508c0171c676957c            17065 main/binary-amd64/Packages.gz
- 1681fb8ebee5b7e96e3321bdbf1640d31cbe1a01210d409a3c9fc5f132adf5f7abb56c9674aaf53302c87e7cd458aec9b8730e8db31c0b75861a88ed1a2b8015            15692 main/binary-amd64/Packages.xz
+ 8a6b394f2fcae309b67505e987b3d27bfe40be7d5dcd11fcfe806be8115fae179b9239a5522280c08e67c8410fd6eb4c8efb87bb961f6f637eeffb6f35fe6635            48095 main/binary-amd64/Packages
+ 868de31dc66c2164726e4bdc9da74c68e28740998def6a6e844849d248ae31da25ce92e571fafb8ba39e85ae8fda313dba9fe56701ec515773e68205663a8949            17091 main/binary-amd64/Packages.gz
+ 52b3169c6cedd153037a4001af4a497ae2ba4c3ad9b7f7b32686a3d448d7e8b07e179702eb5820657fdd7ab84a0ae3c430d1931a98589dbee5de32050f308610            15700 main/binary-amd64/Packages.xz
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQSP5huDdTwmNs10AllPw1Lj04QiXwUCauTn6QAKCRBPw1Lj04Qi
-X9TgAQDl+G6GOJJaC3Gtm/OOQat06dpKA3wfSJXFNB8PbT1bywD/T6ajnZ/7zmbR
-BZd5GskBevd48eD4qJ8n1JClWQEkaQ0=
-=Yu9S
+iHUEARYKAB0WIQSP5huDdTwmNs10AllPw1Lj04QiXwUCauTrJgAKCRBPw1Lj04Qi
+X5F2AQD0UtXEg0vqlogOwL61J8VelCTRmaGuFRpCrRxWU+9RYQEA4eBlVDFMiTaH
+JFRf2vGokqnnRrKMovSvCx3ZDIRv4gk=
+=XOcB
 -----END PGP SIGNATURE-----

@@ -38,37 +38,6 @@ Description: transitional package for PatroneOS's fonts
  Patrone Sans has given way to PatroneOS's own fonts (fonts-patroneos), which
  this package installs. It can be removed.
 
-Package: fonts-patroneos
-Architecture: all
-Version: 1.0.0
-Multi-Arch: foreign
-Priority: optional
-Section: fonts
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 1650
-Recommends: fonts-noto-core, fonts-liberation, fonts-crosextra-caladea
-Breaks: fonts-patrone-sans (<< 2.0.0)
-Replaces: fonts-patrone-sans (<< 2.0.0)
-Filename: pool/main/fonts-patroneos_1.0.0_all.deb
-Size: 481818
-MD5sum: 91e5077d7e5b54a1956671a7eeffb804
-SHA1: 285e9a1c0a97d4c111c28bcebe8616e9834f8436
-SHA256: 103a9dab9df41aa17ea84543ac363663ca722281238ede51c3d158ff42aba806
-SHA512: 705a46fae460da696e1be3c648ecfe7dc60028c8a33007c6c10b6489464a0db374ee7bfaf849bb2e3ff6a786a75a11a843482de5226c1728fb7913a483fff5cf
-Homepage: https://github.com/billsecond/patroneos-fonts
-Description: PatroneOS's fonts: Sans, Mono, Document, Serif and Classic
- PatroneOS's own five font families, drawn from scratch: PatroneOS Sans, the
- desktop's font; PatroneOS Mono, the terminal's, one width throughout, with
- box-drawing characters; PatroneOS Document, for documents; PatroneOS Serif;
- and PatroneOS Classic, a plain sans. Each has a tailed l, so I, l, 1 and |
- all differ, and no slashed zero.
- .
- PatroneOS Document and PatroneOS Classic give each letter the width of the
- fonts documents most often ask for (patrone-branding's fontconfig sends
- Calibri to Document, and Arial and Helvetica to Classic), so those documents
- keep their layout. Noto Sans covers the scripts the fonts don't; Liberation
- Serif and Caladea stand in for the classic serif fonts.
-
 Package: gnome-initial-setup
 Architecture: amd64
 Version: 50.0-0ubuntu7.1patrone5
@@ -787,4 +756,35 @@ Description: terminal emulator for PatroneOS
  and VTE. It copies selected text to the clipboard, pastes with a
  right-click, opens links with Ctrl+click, and has tabs and a dark theme in
  the Patrone colors.
+
+Package: fonts-patroneos
+Architecture: all
+Version: 1.1.0
+Multi-Arch: foreign
+Priority: optional
+Section: fonts
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 1678
+Recommends: fonts-noto-core, fonts-liberation, fonts-crosextra-caladea
+Breaks: fonts-patrone-sans (<< 2.0.0)
+Replaces: fonts-patrone-sans (<< 2.0.0)
+Filename: pool/main/fonts-patroneos_1.1.0_all.deb
+Size: 498606
+MD5sum: 87f3ae8dcefbf2884c265bf8d2e05a92
+SHA1: a4a2872da8c9d8717d1919fc7767051df3b22727
+SHA256: b5ed19868f98d3e4a6a84161dfb346018004d2161c2d0596eb055cfafcf9529d
+SHA512: 8efba1826ef550abf126cfac1689209000985baebb9449517c0ede42117cf8f1356dcd8aec857f3fe7300f83dfbdd8f59d78da71c1f2b9b371594a977ec93216
+Homepage: https://github.com/billsecond/patroneos-fonts
+Description: PatroneOS's fonts: Sans, Mono, Document, Serif and Classic
+ PatroneOS's own five font families, drawn from scratch: PatroneOS Sans, the
+ desktop's font; PatroneOS Mono, the terminal's, one width throughout, with
+ box-drawing characters; PatroneOS Document, for documents; PatroneOS Serif;
+ and PatroneOS Classic, a plain sans. Each has a tailed l, so I, l, 1 and |
+ all differ, and no slashed zero.
+ .
+ PatroneOS Document and PatroneOS Classic give each letter the width of the
+ fonts documents most often ask for (patrone-branding's fontconfig sends
+ Calibri to Document, and Arial and Helvetica to Classic), so those documents
+ keep their layout. Noto Sans covers the scripts the fonts don't; Liberation
+ Serif and Caladea stand in for the classic serif fonts.
 
