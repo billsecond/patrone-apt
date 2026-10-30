@@ -761,20 +761,20 @@ Description: PatroneOS's name, logos and artwork
 
 Package: patrone-gnome-taskbar
 Architecture: all
-Version: 0.4.14
+Version: 0.4.15
 Priority: optional
 Section: gnome
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 369
+Installed-Size: 370
 Depends: dconf-gsettings-backend | gsettings-backend, gnome-shell (>= 50~), gnome-shell (<< 51~), gjs, gir1.2-gtk-4.0
 Recommends: patrone-settings, patrone-file-manager (>= 0.3.10)
 Breaks: gnome-control-center (<< 1:50.3-0ubuntu0.2patrone21), patrone-desktop (<< 0.2.6), patrone-file-manager (<< 0.3.10), patrone-settings (<< 0.3.13)
-Filename: pool/main/patrone-gnome-taskbar_0.4.14_all.deb
-Size: 68888
-MD5sum: 9ab6fb9aec68d0f40ed4b10f7db8f099
-SHA1: 94e95a10cf95d43b0452c32bd3c329ec71bba469
-SHA256: 436d88e45b86c5e10562b83927ddf3403419275ddf449d0de2cfcf13137deca5
-SHA512: 216365799b30e68193a64cc1d42e484b3e8a1c38b88219694b3618987a61b846aefa7a4fd11fac6f298ddcd704f1a0a075c655db36d508118ccd451bae2323a7
+Filename: pool/main/patrone-gnome-taskbar_0.4.15_all.deb
+Size: 68976
+MD5sum: 282382852aa06bec16861c44de7bdfe4
+SHA1: 59e70b4de5103ab2fd6490f66825562761cf7302
+SHA256: d96250ccf0bec308cb7f87414d82638a60d1ce2985840fe73553072e52af6f0d
+SHA512: e3b3e7dbec1eb6e9a1bf05789dff1f1feb96417ad4488efb543c2379ea4beeb5805c36bc9356cc34a35bc8bf1a4576ac303c0e0c96561428a9f1a79db004203b
 Description: Patrone Desktop's taskbar, for its GNOME-based desktop
  A compact taskbar along the bottom of the screen, in place of GNOME's top
  bar, that works the way Windows users expect: the Patrone menu, where typing
