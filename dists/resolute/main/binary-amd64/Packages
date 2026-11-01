@@ -160,52 +160,6 @@ Description: PatroneOS's default apps
  Ubuntu's Files' place in the favorites, and archives, .deb packages and
  Flatpak files in Patrone Unpack. Users' own choices still win.
 
-Package: patrone-desktop
-Architecture: all
-Version: 0.2.6
-Priority: optional
-Section: metapackages
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 58
-Provides: update-notifier
-Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
-Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, breeze-cursor-theme, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-hyperv-setup, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, showtime, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
-Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
-Breaks: patrone-gnome-taskbar (<< 0.4.8)
-Filename: pool/main/patrone-desktop_0.2.6_all.deb
-Size: 14332
-MD5sum: 3eb341666f09e66b3405362753580921
-SHA1: 9bf414cf479b88c769bea648f4ff731214b2a808
-SHA256: 8444b6c14092968cc022851ab2e30dc53a4c4c3a9b5e70a10ec60d4f1dd9943b
-SHA512: 75cff6b3564e2e0beb8e2b531a0e6487a9874bbb716d2b3f2e2274618217d1019ccbafc8f4db4dd6613d23269ef9cf1d657b805849c4fdac81fdf4814a4e2f32
-Description: PatroneOS's desktop
- Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
- own services: no Ubuntu Pro (its client, its services and its notices), no
- Software Updater (Patrone Software tells of updates and installs them), no
- hwctl (Canonical's hardware-certification tool), and nothing that reports
- to Canonical: no whoopsie (error reports), ubuntu-insights or ubuntu-report
- (system reports), and no apport-gtk, the crash dialog that offered to send
- them. Crash reports still collect in /var/crash for debugging, and nothing
- sends them. First-login setup skips Ubuntu's page that asks to send reports
- and its Ubuntu Pro page. It lists Ubuntu's desktop packages itself, in
- place of Ubuntu's metapackages (ubuntu-desktop-minimal and ubuntu-minimal),
- which need Ubuntu Pro and Software Updater.
- .
- Patrone's own updates come from its apt repository on GitHub Pages
- (billsecond.github.io/patrone-apt), whose key and source it installs; its
- builds of Ubuntu's GDM, GNOME Settings and first-login setup come before
- Ubuntu's own. The clock is set from NTS servers run by Cloudflare, Netnod
- and PTB, NetworkManager checks for Wi-Fi sign-in pages with GNOME's server,
- and nothing offers to upgrade to Ubuntu's next release. Its app store is GNOME
- Software, with Patrone's picks, in place of Canonical's App Center. What
- the system connects to, and who runs each service, is in
- /usr/share/doc/patrone-desktop/connections.txt.
- .
- It also brings a few everyday tools: fastfetch (system information, in
- Patrone's colors), nano and the full vim; btop and htop (what's running);
- tree, ripgrep (rg) and fzf (finding files and text); bat (files with
- highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
-
 Package: patrone-guest-tools
 Architecture: all
 Version: 0.1.1
@@ -271,31 +225,6 @@ Description: Virtual Machine Setup: gets PatroneOS ready for Hyper-V
  nothing when everything is set up.
  .
  Hyper-V and Windows are trademarks of the Microsoft group of companies.
-
-Package: patrone-software
-Architecture: all
-Version: 0.1.7
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 31
-Depends: gnome-software, gnome-software-plugin-flatpak
-Filename: pool/main/patrone-software_0.1.7_all.deb
-Size: 9780
-MD5sum: 6dd40845ee8b6b3e14cc85f990136239
-SHA1: 610ff7d9ae774e43b29fa0fd1d7f6afe2d051a58
-SHA256: ba85b9e5c9460cb7c0ac2fa3d8f7ea663f2ca55505a7a7d69262c0f4f2a0fda3
-SHA512: b6488cdfa5230aaa4a10da1d21f600365c6a0f4d3b23c18b33f65db7a4eb0d0359b869cb4da00e896dd43d3029c5e57a0aeedc0d289e5c76fdf878bf56f8a736
-Description: PatroneOS's app store: GNOME Software with Patrone's picks
- GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
- snap, which this removes when it's first installed). It finds apps in
- Ubuntu's archive and on Flatpak remotes such as Flathub, and its Explore
- page shows Patrone's own picks in place of GNOME's. It adds Patrone's app
- index, which lists the Craft apps and installs them from their own GitHub
- releases, and Flathub.
- .
- It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
- browsed; installed snaps, such as Chromium, still update through snapd.
 
 Package: patrone-unpack
 Architecture: amd64
@@ -787,4 +716,304 @@ Description: GNOME Display Manager (shared library)
  look and design are the same as those of a GNOME session.
  .
  This package contains the shared library required by gnome-shell.
+
+Package: gnome-software-common
+Architecture: all
+Version: 50.0-1patrone1
+Multi-Arch: foreign
+Priority: optional
+Section: gnome
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 7376
+Filename: pool/main/gnome-software-common_50.0-1patrone1_all.deb
+Size: 1015372
+MD5sum: 5c04af41fe1ea73d195062bbc56342de
+SHA1: 62ace1eeb815e574ce4964dd75b1bb054cbdc3ba
+SHA256: 11b47b80a4d79e05205918730c80322d77a17920fe40daecd367fd86f41d2d6a
+SHA512: 6be20dec65d703f5289e4177b8616806464dbbd286efbbc2fe3c5fa399644dc55daf462505839cff14f04d2a2c5a3b9eb3e300c244a32bac85b7418f2ac51261
+Homepage: https://apps.gnome.org/Software/
+Description: Software Center for GNOME (common files)
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+ .
+ This package contains the architecture-independent files.
+
+Package: gnome-software-dev
+Architecture: amd64
+Version: 50.0-1patrone1
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 209
+Depends: libappstream-dev (>= 0.14.0), libglib2.0-dev (>= 2.76.0), libgtk-4-dev (>= 4.13.4), libjson-glib-dev (>= 1.6.0), libpolkit-gobject-1-dev, libsoup-3.0-dev, libsysprof-capture-4-dev (>= 3.38.0), libxmlb-dev (>= 0.3.4)
+Suggests: gnome-software-doc
+Filename: pool/main/gnome-software-dev_50.0-1patrone1_amd64.deb
+Size: 34064
+MD5sum: 21a484d44413b0a15c4a5d4c851904bf
+SHA1: 0c26b4e3146a9ef96ae50be0e6b18368306fc5e2
+SHA256: 5f1894b565f6b20ebcfa2c1766df99fcd395b0dcea116bc0f71e447205f65c74
+SHA512: bc2638b681511c0fa43393add5867c23e74a363205976c08d3753c114f0c3714092479a7adc6d72985876741d7e1afdca996208fc63069ca2475e699f3ede440
+Homepage: https://apps.gnome.org/Software/
+Description: Software Center for GNOME - development files
+ Software lets you install and update applications and system extensions.
+ .
+ This package contains headers and other files required when compiling external
+ plugins for use with Software.
+
+Package: gnome-software-doc
+Architecture: all
+Version: 50.0-1patrone1
+Multi-Arch: foreign
+Priority: optional
+Section: doc
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 1935
+Filename: pool/main/gnome-software-doc_50.0-1patrone1_all.deb
+Size: 278626
+MD5sum: 535179d41596bcc814cfdfcd2f74962f
+SHA1: 714174f9d2a269f1a77ec1ce28552fe7afb07185
+SHA256: 100dfeaae3d3f29d3f47d1dbf2769c0609779e4e06390ee9b65f3b57375163e8
+SHA512: 8f477fef03db1cc159bf1d0cd57b74cda5582b02f0d24b073beb897661700bb0ee545f6822e9c281dcd2953af7ed6fd982bcf68fe9976f2f69af0f396361bb60
+Homepage: https://apps.gnome.org/Software/
+Description: Software Center for GNOME - documentation
+ Software lets you install and update applications and system extensions.
+ .
+ This package contains documentation for use when developing plugins for
+ Software.
+
+Package: gnome-software-plugin-deb
+Architecture: amd64
+Version: 50.0-1patrone1
+Priority: optional
+Section: gnome
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 303
+Provides: gnome-software-plugin (= 50.0-1patrone1)
+Depends: appstream, apt-config-icons, gnome-software (= 50.0-1patrone1), libgtk3-perl, packagekit (>= 1.2.5), libappstream5 (>= 1.0.0), libc6 (>= 2.14), libglib2.0-0t64 (>= 2.80.0), libpackagekit-glib2-18 (>= 1.2.7), libxmlb2 (>= 0.3.4)
+Suggests: apt-config-icons-hidpi
+Breaks: gnome-software (<< 46.0-2~)
+Replaces: gnome-software (<< 46.0-2~)
+Filename: pool/main/gnome-software-plugin-deb_50.0-1patrone1_amd64.deb
+Size: 82888
+MD5sum: c621ec59e64fc0017a68aabb95d87cd7
+SHA1: aeb700d2826de9dac733d096ebefe84290b52db9
+SHA256: 50b4027ee24299c58bda0b013db53eadbfc8884e293ec620f7836384094fabb3
+SHA512: dee9640b09e0fbfe10efb0a4f2572adca2eec6bf6f8fd2aae36cf81103d9a7b8504d41a299dd07bb2a97a579f877b79d8d6df7388301824ae4e87a145dc30b04
+Homepage: https://apps.gnome.org/Software/
+Description: .deb support for GNOME Software
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+ .
+ This package contains the AppStream and PackageKit plugins necessary for
+ managing .deb packages with apt.
+
+Package: gnome-software-plugin-flatpak
+Architecture: amd64
+Version: 50.0-1patrone1
+Priority: optional
+Section: gnome
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 294
+Provides: gnome-software-plugin (= 50.0-1patrone1)
+Depends: flatpak (>= 1.14.1), gnome-software (= 50.0-1patrone1), libappstream5 (>= 1.0.0), libc6 (>= 2.38), libflatpak0 (>= 1.15.6), libglib2.0-0t64 (>= 2.80.0), libostree-1-1 (>= 2022.5-2~), libxmlb2 (>= 0.3.4)
+Breaks: gnome-software (<< 46.0-2~)
+Replaces: gnome-software (<< 46.0-2~)
+Filename: pool/main/gnome-software-plugin-flatpak_50.0-1patrone1_amd64.deb
+Size: 91338
+MD5sum: bd615f72f0801207a9dbc12171862547
+SHA1: 9b74b1cf2963b809379172e9e127a008cb0a0186
+SHA256: 6d534ea1006c0f14c550c480087a31cc381dc9947e356374617901fa16b67677
+SHA512: 2b209d7d48ced121b1c2dcb7cfc41b608c573b640c44302587b36a39b76cb5005b892d09593ebfa6ff11d9934f1bfa8f6a23d25c3b5a055b65c5415ce444fa3a
+Homepage: https://apps.gnome.org/Software/
+Description: Flatpak support for GNOME Software
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+ .
+ This package contains the Flatpak plugin.
+
+Package: gnome-software-plugin-fwupd
+Architecture: amd64
+Version: 50.0-1patrone1
+Priority: optional
+Section: gnome
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 140
+Depends: fwupd, gnome-software (= 50.0-1patrone1), libappstream5 (>= 1.0.0), libc6 (>= 2.14), libfwupd3 (>= 2.0.0), libglib2.0-0t64 (>= 2.80.0)
+Breaks: gnome-software (<< 46.0-2~)
+Replaces: gnome-software (<< 46.0-2~)
+Filename: pool/main/gnome-software-plugin-fwupd_50.0-1patrone1_amd64.deb
+Size: 39072
+MD5sum: 5d5602d71096d9d041c7ac43f7ed8676
+SHA1: 355d8687c743482d146ed3beced5e05afe8a9c83
+SHA256: 56649bd29092db0aa1bd7528b8aa87d8f2440ee62ff81bc9cec8b9ecfc1cc6f2
+SHA512: 0baaf0bbe12bee1ea8fccf6218e0f27c587b50697f502c8f2cd9d247d4152259ab411b92744c557771044942617f711a7bea1e5c3ee8be96c9cf86bb1d3ad6e4
+Homepage: https://apps.gnome.org/Software/
+Description: Firmware updater support for GNOME Software
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+ .
+ This package contains the fwupd plugin to update firmware.
+
+Package: gnome-software-plugin-snap
+Architecture: amd64
+Version: 50.0-1patrone1
+Priority: optional
+Section: gnome
+Source: gnome-software
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 146
+Provides: gnome-software-plugin (= 50.0-1patrone1)
+Depends: gnome-software (= 50.0-1patrone1), snapd, libappstream5 (>= 1.0.0), libc6 (>= 2.14), libglib2.0-0t64 (>= 2.80.0), libgtk-4-1 (>= 4.17.5), libjson-glib-1.0-0 (>= 1.6.0), libsnapd-glib-2-1 (>= 1.64)
+Breaks: gnome-software (<< 46.0-2~)
+Replaces: gnome-software (<< 46.0-2~)
+Filename: pool/main/gnome-software-plugin-snap_50.0-1patrone1_amd64.deb
+Size: 41376
+MD5sum: 0c972c1d99d0bd22503f6d41d2f9e300
+SHA1: 8383c6e50fecbcb009e3a84f68552d50380c3358
+SHA256: b13f181e9b88ba19ad7db02793c080fba9c687903374a829d0dbbbbbf6bfc12b
+SHA512: 31b8a50e8dd8bedf965dd6938a47ed54a2d3d0f6dea77a220927137ce8a93f53dc329b4e9b8f04d31c867863f7d38c3757e1fbf5361e84c7a4bec29231201074
+Homepage: https://apps.gnome.org/Software/
+Description: Snap support for GNOME Software
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+ .
+ This package contains the Snap plugin.
+
+Package: gnome-software
+Architecture: amd64
+Version: 50.0-1patrone1
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 4594
+Depends: gnome-software-plugin-deb (= 50.0-1patrone1) | gnome-software-plugin (= 50.0-1patrone1), gnome-software-common (= 50.0-1patrone1), gsettings-desktop-schemas (>= 3.18), dconf-gsettings-backend | gsettings-backend, libadwaita-1-0 (>= 1.8~alpha), libappstream5 (>= 1.0.0), libc6 (>= 2.38), libgdk-pixbuf-2.0-0 (>= 2.25.2), libglib2.0-0t64 (>= 2.83.0), libgtk-4-1 (>= 4.17.5), libgudev-1.0-0 (>= 146), libjson-glib-1.0-0 (>= 1.6.0), libmalcontent-0-0 (>= 0.6.0), libpackagekit-glib2-18 (>= 0.9.4), libpango-1.0-0 (>= 1.18.0), libpolkit-gobject-1-0 (>= 0.99), libsoup-3.0-0 (>= 3.0.3), libxmlb2 (>= 0.3.4)
+Recommends: gnome-software-plugin-deb
+Suggests: gnome-software-plugin-flatpak, gnome-software-plugin-snap
+Conflicts: sessioninstaller
+Filename: pool/main/gnome-software_50.0-1patrone1_amd64.deb
+Size: 1258552
+MD5sum: 731ee7ae7c641db476d05181ea738839
+SHA1: c47ac21ee4e389d3092e871909ed5dd4474b0ef3
+SHA256: 2e749e21c44b13b0ddc064915a1f44002afb20d15a7c6794a8a3429da79146c4
+SHA512: 0f5190efa9b9d7da6f270a1badcfee652eedf10bbd17a5b87a453b903a8cbc52bad40a8eea1fd008ab3bae34cf4fc55e73935f1f89089ef2a886f38a5f4fa3cb
+Homepage: https://apps.gnome.org/Software/
+Description: Software Center for GNOME
+ Software lets you install and update applications and system extensions.
+ .
+ Software uses a plugin architecture to separate the frontend from the
+ technologies that are used underneath. Currently, a PackageKit plugin provides
+ data from a number of traditional packaging systems, such as rpm or apt. An
+ appdata plugin provides additional metadata from locally installed data in the
+ appdata format.
+
+Package: patrone-desktop
+Architecture: all
+Version: 0.2.7
+Priority: optional
+Section: metapackages
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 58
+Provides: update-notifier
+Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
+Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, breeze-cursor-theme, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-hyperv-setup, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, showtime, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
+Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
+Breaks: patrone-gnome-taskbar (<< 0.4.8)
+Filename: pool/main/patrone-desktop_0.2.7_all.deb
+Size: 14452
+MD5sum: 82746a968d145e446fb23d0a8f5437b5
+SHA1: b4f6724c1cb860291d127fe3f519ab6900a9011f
+SHA256: 6cf87a4b5c0033375c5421cffbe45c3c0135e1fb4243bd7544b7b87cbee916f2
+SHA512: 6e72d0f8234e8530d8583c8cb43c130f01293f41fefbe3c6388b6420679e8a62f61a6cb74e6e3577e6625a747b4452b2633100c861c040585a94f53a8a735687
+Description: PatroneOS's desktop
+ Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
+ own services: no Ubuntu Pro (its client, its services and its notices), no
+ Software Updater (Patrone Software tells of updates and installs them), no
+ hwctl (Canonical's hardware-certification tool), and nothing that reports
+ to Canonical: no whoopsie (error reports), ubuntu-insights or ubuntu-report
+ (system reports), and no apport-gtk, the crash dialog that offered to send
+ them. Crash reports still collect in /var/crash for debugging, and nothing
+ sends them. First-login setup skips Ubuntu's page that asks to send reports
+ and its Ubuntu Pro page. It lists Ubuntu's desktop packages itself, in
+ place of Ubuntu's metapackages (ubuntu-desktop-minimal and ubuntu-minimal),
+ which need Ubuntu Pro and Software Updater.
+ .
+ Patrone's own updates come from its apt repository on GitHub Pages
+ (billsecond.github.io/patrone-apt), whose key and source it installs; its
+ builds of Ubuntu's GDM, GNOME Settings and first-login setup come before
+ Ubuntu's own. The clock is set from NTS servers run by Cloudflare, Netnod
+ and PTB, NetworkManager checks for Wi-Fi sign-in pages with GNOME's server,
+ and nothing offers to upgrade to Ubuntu's next release. Its app store is GNOME
+ Software, with Patrone's picks, in place of Canonical's App Center. What
+ the system connects to, and who runs each service, is in
+ /usr/share/doc/patrone-desktop/connections.txt.
+ .
+ It also brings a few everyday tools: fastfetch (system information, in
+ Patrone's colors), nano and the full vim; btop and htop (what's running);
+ tree, ripgrep (rg) and fzf (finding files and text); bat (files with
+ highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
+
+Package: patrone-software
+Architecture: all
+Version: 0.1.8
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 28
+Depends: gnome-software (>= 50.0-1patrone1), gnome-software-plugin-flatpak
+Filename: pool/main/patrone-software_0.1.8_all.deb
+Size: 9834
+MD5sum: 0f2f2d348732bce54fc4ae919fe86454
+SHA1: 605db5c2aa2b53515c5a4f01f0802e3ac9740aae
+SHA256: daa0ee2b65734ea5a9ef6575c2eff737bdc27f9b4daee074e81bd09a68cba101
+SHA512: 39143d24522d44653d3007c7ac4c1ec21d4e66ee7900433b67991e1ae598bd5148bb2f9d881f6f91092727416a6f5058b4ee72daaee3c6d7fd7f548ead81e3c6
+Description: PatroneOS's app store: GNOME Software with Patrone's picks
+ GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
+ snap, which this removes when it's first installed). It finds apps in
+ Ubuntu's archive and on Flatpak remotes such as Flathub, and its Featured
+ tab shows Patrone's own picks in place of GNOME's. It adds Patrone's app
+ index, which lists the Craft apps and installs them from their own GitHub
+ releases, and Flathub.
+ .
+ It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
+ browsed; installed snaps, such as Chromium, still update through snapd.
 
