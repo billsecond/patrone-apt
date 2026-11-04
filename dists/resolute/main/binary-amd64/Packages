@@ -137,29 +137,6 @@ Description: Asks which web browser to install, the first time one's needed
  GNOME Web. Patrone Software installs it from Flathub; it then becomes the
  default for web links and opens, with the link that was waiting.
 
-Package: patrone-default-apps
-Architecture: all
-Version: 0.2.2
-Priority: optional
-Section: misc
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 23
-Depends: dconf-gsettings-backend | gsettings-backend, patrone-browser-chooser
-Recommends: patrone-file-manager, patrone-terminal, patrone-unpack
-Filename: pool/main/patrone-default-apps_0.2.2_all.deb
-Size: 4538
-MD5sum: f830f8fba44226f28a9e62ef15c8d020
-SHA1: e6e8ada831649efaf61c375693209b79b1cb53b2
-SHA256: 0f5c838cf9ad033db366a2b0aa63d1ab21d11b4ef941e6d2153ad44f3dcb9833
-SHA512: e9478f6ae7908631e3610ed4ee12370a6bc3ce35804c4e395e90e2d961e75eb8e606075f1f0082bb9874b303f2ba6220b2f62b940c36a98c7c6aec3a67506105
-Description: PatroneOS's default apps
- PatroneOS comes with no web browser: until one's installed, web links
- open Patrone Browser Chooser, which asks which one to install. Whichever
- browser is installed then opens them, and comes first in the favorites,
- with Patrone Terminal. Folders open in Patrone File Manager, which takes
- Ubuntu's Files' place in the favorites, and archives, .deb packages and
- Flatpak files in Patrone Unpack. Users' own choices still win.
-
 Package: patrone-guest-tools
 Architecture: all
 Version: 0.1.1
@@ -946,24 +923,73 @@ Description: Software Center for GNOME
  appdata plugin provides additional metadata from locally installed data in the
  appdata format.
 
+Package: patrone-software
+Architecture: all
+Version: 0.1.8
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 28
+Depends: gnome-software (>= 50.0-1patrone1), gnome-software-plugin-flatpak
+Filename: pool/main/patrone-software_0.1.8_all.deb
+Size: 9834
+MD5sum: 0f2f2d348732bce54fc4ae919fe86454
+SHA1: 605db5c2aa2b53515c5a4f01f0802e3ac9740aae
+SHA256: daa0ee2b65734ea5a9ef6575c2eff737bdc27f9b4daee074e81bd09a68cba101
+SHA512: 39143d24522d44653d3007c7ac4c1ec21d4e66ee7900433b67991e1ae598bd5148bb2f9d881f6f91092727416a6f5058b4ee72daaee3c6d7fd7f548ead81e3c6
+Description: PatroneOS's app store: GNOME Software with Patrone's picks
+ GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
+ snap, which this removes when it's first installed). It finds apps in
+ Ubuntu's archive and on Flatpak remotes such as Flathub, and its Featured
+ tab shows Patrone's own picks in place of GNOME's. It adds Patrone's app
+ index, which lists the Craft apps and installs them from their own GitHub
+ releases, and Flathub.
+ .
+ It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
+ browsed; installed snaps, such as Chromium, still update through snapd.
+
+Package: patrone-default-apps
+Architecture: all
+Version: 0.2.3
+Priority: optional
+Section: misc
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Installed-Size: 23
+Depends: dconf-gsettings-backend | gsettings-backend, patrone-browser-chooser
+Recommends: patrone-file-manager, patrone-notepad, patrone-terminal, patrone-unpack
+Filename: pool/main/patrone-default-apps_0.2.3_all.deb
+Size: 4812
+MD5sum: da4736e1364c62e274969245111b15e2
+SHA1: e9da6518af62752462bb6f6e1b951bd5f0f54653
+SHA256: 8d5411238e288bbc3c2329391b5345332690926dc3eadfeab1e839566540f514
+SHA512: d7775b5908052eec6a13b8c9ba3d44e78b345f583468a34baf000e7fe3db2b6348a5a4c019c49b08554078ddf7638637471817bf2b05d648d90cc4cce0bbae92
+Description: PatroneOS's default apps
+ PatroneOS comes with no web browser: until one's installed, web links
+ open Patrone Browser Chooser, which asks which one to install. Whichever
+ browser is installed then opens them, and comes first in the favorites,
+ with Patrone Terminal. Folders open in Patrone File Manager, which takes
+ Ubuntu's Files' place in the favorites, archives, .deb packages and
+ Flatpak files in Patrone Unpack, and plain text in Notepad. Users' own
+ choices still win.
+
 Package: patrone-desktop
 Architecture: all
-Version: 0.2.7
+Version: 0.2.8
 Priority: optional
 Section: metapackages
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
 Installed-Size: 58
 Provides: update-notifier
 Depends: patrone-branding (>= 0.1.19), adduser, alsa-base, alsa-utils, anacron, apt, at-spi2-core, bc, bsdutils, ca-certificates, chrony | time-daemon, console-setup, debconf, debconf-i18n, dhcpcd-base, dmz-cursor-theme, e2fsprogs, eject, fontconfig, fonts-dejavu-core, foomatic-db-compressed-ppds, gdm3, ghostscript, gnome-control-center, gnome-menus, gnome-session-canberra, gnome-settings-daemon, gnome-shell, gnome-shell-ubuntu-extensions, gstreamer1.0-alsa, gstreamer1.0-packagekit, gstreamer1.0-plugins-base-apps, init, inputattach, iproute2, iputils-ping, iw, kbd, kmod, language-selector-common, language-selector-gnome, less, libatk-adaptor, libnotify-bin, libsasl2-modules, locales, login, lsb-release, mawk, mount, nautilus, netbase, netcat-openbsd, netplan.io, openprinting-ppds, passwd, pipewire-pulse, printer-driver-pnm2ppa, procps, python3, rfkill, sensible-utils, software-properties-common, spice-vdagent, sudo, sudo-rs, tzdata, ubuntu-drivers-common, ubuntu-keyring, ubuntu-session, ubuntu-settings, udev, unzip, vim-tiny, whiptail, wireplumber, wpasupplicant, xdg-terminal-exec, xdg-user-dirs, xdg-user-dirs-gtk, xkb-data, yelp, zenity, zip
-Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, breeze-cursor-theme, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-hyperv-setup, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, showtime, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
+Recommends: apport, 7zip, bat, btop, fastfetch, fzf, htop, nano, ncdu, ripgrep, tree, vim, breeze-cursor-theme, patrone-default-apps, patrone-file-manager, patrone-gnome-taskbar, patrone-guest-tools, patrone-hyperv-setup, patrone-notepad, patrone-remote-desktop, patrone-settings, patrone-shell-config, patrone-software, patrone-task-manager, patrone-terminal, appstream, apt-config-icons-hidpi, avahi-daemon, baobab, bluez, bluez-cups, brltty, cloud-init, cups, cups-bsd, cups-client, cups-filters, dirmngr, dracut, fonts-liberation, fonts-noto-cjk, fonts-noto-color-emoji, fonts-noto-core, fonts-ubuntu, fwupd, fwupd-signed, gamemode, gir1.2-gmenu-3.0, gnome-bluetooth-sendto, gnome-calculator, gnome-characters, gnome-clocks, gnome-disk-utility, gnome-font-viewer, gnome-initial-setup, gnome-keyring, gnome-logs, gnome-remote-desktop, gnome-text-editor, gnome-user-docs, gpg-agent, gsettings-ubuntu-schemas, gst-audio-thumbnailer, gst-video-thumbnailer, gvfs-fuse, hplip, ibus, ibus-gtk, ibus-gtk3, ibus-table, im-config, kdump-tools, laptop-detect, libglib2.0-bin, libnss-mdns, libpam-fprintd, libpam-gnome-keyring, libpam-sss, libspa-0.2-bluetooth, libwmf-0.2-7-gtk, loupe, memtest86+, nautilus-sendto, network-manager, network-manager-openvpn-gnome, network-manager-pptp-gnome, orca, packagekit, papers, pcmciautils, plymouth-theme-spinner, policykit-desktop-privileges, printer-driver-brlaser, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-m2300w, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, rsyslog, seahorse, showtime, snapd, speech-dispatcher, sysprof, systemd-oomd, wsdd, xcursor-themes, xdg-desktop-portal-gnome, xdg-utils, yaru-theme-gnome-shell, yaru-theme-gtk, yaru-theme-icon, yaru-theme-sound
 Conflicts: apport-gtk, hwctl, ubuntu-advantage-desktop-daemon, ubuntu-insights, ubuntu-pro-client, ubuntu-report, update-manager, update-notifier, whoopsie
 Breaks: patrone-gnome-taskbar (<< 0.4.8)
-Filename: pool/main/patrone-desktop_0.2.7_all.deb
-Size: 14452
-MD5sum: 82746a968d145e446fb23d0a8f5437b5
-SHA1: b4f6724c1cb860291d127fe3f519ab6900a9011f
-SHA256: 6cf87a4b5c0033375c5421cffbe45c3c0135e1fb4243bd7544b7b87cbee916f2
-SHA512: 6e72d0f8234e8530d8583c8cb43c130f01293f41fefbe3c6388b6420679e8a62f61a6cb74e6e3577e6625a747b4452b2633100c861c040585a94f53a8a735687
+Filename: pool/main/patrone-desktop_0.2.8_all.deb
+Size: 14516
+MD5sum: 5fae6b04c1f355209351b26bec8886fc
+SHA1: 2d6f2c441feb722ab6e1b405927861cbfdc11145
+SHA256: 65992915265f2059a27a9927c43130b7dde0c790851f811ae2a11183ea0f64ed
+SHA512: 8f7b6723e4ce211433e2bbd52690cc51f7f933f14838d101af32eab251327c18bd48119618b105cba9f7e354aae337ddb26cf9d0d99cc433c8e2faeb720c79b4
 Description: PatroneOS's desktop
  Ubuntu's desktop with Patrone's branding and apps, and none of Canonical's
  own services: no Ubuntu Pro (its client, its services and its notices), no
@@ -992,28 +1018,40 @@ Description: PatroneOS's desktop
  tree, ripgrep (rg) and fzf (finding files and text); bat (files with
  highlighting, run as batcat); ncdu (what's using the disk); and 7zip (7z).
 
-Package: patrone-software
-Architecture: all
-Version: 0.1.8
+Package: patrone-notepad
+Architecture: amd64
+Version: 0.3.2
 Priority: optional
-Section: gnome
+Section: editors
 Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Installed-Size: 28
-Depends: gnome-software (>= 50.0-1patrone1), gnome-software-plugin-flatpak
-Filename: pool/main/patrone-software_0.1.8_all.deb
-Size: 9834
-MD5sum: 0f2f2d348732bce54fc4ae919fe86454
-SHA1: 605db5c2aa2b53515c5a4f01f0802e3ac9740aae
-SHA256: daa0ee2b65734ea5a9ef6575c2eff737bdc27f9b4daee074e81bd09a68cba101
-SHA512: 39143d24522d44653d3007c7ac4c1ec21d4e66ee7900433b67991e1ae598bd5148bb2f9d881f6f91092727416a6f5058b4ee72daaee3c6d7fd7f548ead81e3c6
-Description: PatroneOS's app store: GNOME Software with Patrone's picks
- GNOME Software, in place of Ubuntu's App Center (Canonical's snap-store
- snap, which this removes when it's first installed). It finds apps in
- Ubuntu's archive and on Flatpak remotes such as Flathub, and its Featured
- tab shows Patrone's own picks in place of GNOME's. It adds Patrone's app
- index, which lists the Craft apps and installs them from their own GitHub
- releases, and Flathub.
+Installed-Size: 1608
+Depends: libc6 (>= 2.35), libcairo2 (>= 1.2.4), libgcc-s1 (>= 4.2), libglib2.0-0t64 (>= 2.80.0), libgraphene-1.0-0 (>= 1.5.4), libgtk-4-1 (>= 4.19.3), libpango-1.0-0 (>= 1.55.0), libpangocairo-1.0-0 (>= 1.14.0), fonts-patroneos
+Filename: pool/main/patrone-notepad_0.3.2_amd64.deb
+Size: 605770
+MD5sum: a8b9249092d90c7dcbab1ecf6d32c08a
+SHA1: 5635014a4b801fe614b9e7f747d19a807eb229f5
+SHA256: 92b982e5459978a3c167418dfa877158494de630c9d03773bf22b1203dfa42ca
+SHA512: 0aefb5f314c5513827cd9b40a023c94ee4eb1592cee7ee3255fad09c332c2493bcd5b4627e0fdcde30b6992c2c1eb022b848acfc4856d518e6939b48fa31b8e7
+Description: Notepad: plain text in tabs, for PatroneOS
+ Notepad edits plain text files, each in a tab across the top of the
+ window, with File, Edit and View menus, find and replace, go to line, word
+ wrap, zoom, a choice of font (PatroneOS Mono by default), printing, and a
+ light or dark look. Its status bar shows the cursor's line and column, how
+ many characters there are, the zoom, and the file's line endings and
+ encoding, which it keeps when it saves (UTF-8, UTF-16 and CP1252; LF, CRLF
+ and CR).
  .
- It leaves out GNOME Software's snap plugin, so Canonical's Snap Store isn't
- browsed; installed snaps, such as Chromium, still update through snapd.
+ Markdown files show formatted as they're edited, in PatroneOS Sans with
+ code in PatroneOS Mono: headings, bold, italic, strikethrough, links,
+ lists, quotes, code blocks, tables, task boxes you can tick, rules and
+ images, with the markup showing on the line being edited. A formatting
+ bar has headings, bold, italic, strikethrough, lists, links, clear
+ formatting and an outline of the headings; the status bar switches to the
+ Markdown as typed, and Export as HTML makes a web page of it. What's saved
+ is the Markdown, as it was typed.
+ .
+ By default it keeps the open tabs and their unsaved changes when it closes
+ and brings them back the next time, without changing the files; Settings
+ turns that off, and Notepad then asks to save changes when it closes. The
+ command is notepad.
 
