@@ -42,11 +42,17 @@ Ubuntu updates them.</p>
 <a href="patrone-archive-keyring.asc">patrone-archive-keyring.asc</a>, fingerprint</p>
 <pre>8FE6 1B83 753C 2636 CD74  0259 4FC3 52E3 D384 225F</pre>
 
-<h2>Adding it by hand</h2>
-<p>For Ubuntu 26.04 LTS (resolute), amd64:</p>
+<h2>Patrone's apps on Ubuntu</h2>
+<p>For Ubuntu 26.04 LTS (resolute) and systems built on it, amd64. This adds
+only Patrone's apps (the <code>apps</code> component), so nothing of
+Ubuntu's is replaced:</p>
 <pre>sudo curl -fsSLo /usr/share/keyrings/patrone-archive-keyring.gpg https://billsecond.github.io/patrone-apt/patrone-archive-keyring.gpg
-sudo curl -fsSLo /etc/apt/sources.list.d/patrone.sources https://billsecond.github.io/patrone-apt/patrone.sources
-sudo apt update</pre>
+sudo curl -fsSLo /etc/apt/sources.list.d/patrone-apps.sources https://billsecond.github.io/patrone-apt/patrone-apps.sources
+sudo apt update
+sudo apt install patrone-terminal patrone-file-manager patrone-notepad patrone-task-manager patrone-unpack</pre>
+<p>Don't add <code>patrone.sources</code> to Ubuntu: it's PatroneOS's own,
+and it replaces Ubuntu's login screen, Settings and Software with Patrone's
+builds.</p>
 <p>The source is at <a href="https://github.com/billsecond/patrone-apt">github.com/billsecond/patrone-apt</a>.</p>
 </main>
 </body>

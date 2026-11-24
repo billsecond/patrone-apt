@@ -14,12 +14,13 @@ index=dists/resolute/main/binary-amd64/Packages
 rm -rf "$site"
 mkdir -p "$site"
 cp index.html patrone-archive-keyring.gpg patrone-archive-keyring.asc \
-    patrone.sources "$site/"
+    patrone.sources patrone-apps.sources "$site/"
 # Nothing published yet: the landing page and key only
 [ -f "$index" ] || exit 0
 cp -r dists "$site/"
 
-# Filename and SHA256 of each deb, in this index and the previous one
+# Filename and SHA256 of each deb, in this index and the previous one. Only
+# main's: the apps component's index names some of the same files, no others.
 files() { awk '$1 == "Filename:" { f = $2 } $1 == "SHA256:" { print $2 "  " f }'; }
 {
     files <"$index"
