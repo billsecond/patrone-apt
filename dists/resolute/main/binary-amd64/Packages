@@ -38,36 +38,6 @@ Description: transitional package for PatroneOS's fonts
  Patrone Sans has given way to PatroneOS's own fonts (fonts-patroneos), which
  this package installs. It can be removed.
 
-Package: gnome-initial-setup
-Architecture: amd64
-Version: 50.0-0ubuntu7.1patrone5
-Priority: optional
-Section: gnome
-Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
-Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Installed-Size: 3046
-Depends: gnome-settings-daemon (>= 3.24), pkexec (>= 0.103), polkitd (>= 0.103), tecla (>= 45~rc), gnome-control-center-data, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.29), libadwaita-1-0 (>= 1.8~alpha), libc6 (>= 2.34), libdrm2 (>= 2.4.3), libfontconfig1 (>= 2.12.6), libgdk-pixbuf-2.0-0 (>= 2.31.1), libgdm1 (>= 3.8.3), libgeoclue-2-0 (>= 2.6.0), libgeocode-glib-2-0 (>= 0.99.1), libglib2.0-0t64 (>= 2.80.0), libgnome-bg-4-2t64 (>= 3.27.90), libgnome-desktop-4-2t64 (>= 3.17.92), libgnome-qr-gtk-4-0 (>= 44.5-1ubuntu1), libgtk-4-1 (>= 4.17.0), libgweather-4-0t64 (>= 4.1), libharfbuzz0b (>= 0.6.0), libibus-1.0-5 (>= 1.5.2), libinsights0 (>= 0.6.0), libjson-glib-1.0-0 (>= 1.5.2), libkrb5-3 (>= 1.8+dfsg), libnm0 (>= 1.2), libnma-gtk4-0 (>= 1.8.34), libpango-1.0-0 (>= 1.32.5), libpolkit-gobject-1-0 (>= 0.103), libpwquality1 (>= 1.1.0), libwebkitgtk-6.0-4 (>= 2.37.1)
-Recommends: accountsservice, geoclue-2.0 (>= 2.6.0), language-selector-common
-Suggests: gdm3
-Breaks: gnome-session-bin (<< 50~)
-Filename: pool/main/gnome-initial-setup_50.0-0ubuntu7.1patrone5_amd64.deb
-Size: 807396
-MD5sum: 1c821fb6e8844bf704bc78b137e6ba00
-SHA1: 73b216cab347f9c2d0864835be7fdf8cdd943fce
-SHA256: e4e0a7d7b771bd5963235c3454880cda867a99a4edce96573a0b881f3cb19d64
-SHA512: f38034613d9aaca432c7b70f5a15afd96d766831a53589dae2a645bb190dcc307ed073717a355c203d3e15e43fb3ef13d9c0bea9d15d6b72f77f410664af934c
-Homepage: https://git.gnome.org/browse/gnome-initial-setup/
-Description: Initial GNOME system setup helper
- After acquiring or installing a new system there are a few essential things
- to set up before use. GNOME Initial Setup aims to provide a simple, easy,
- and safe way to prepare a new system.
- .
- GNOME Initial Setup runs the first time you log in to the GNOME desktop
- and lets you easily configure your language, keyboard layout, online accounts
- integration, and more.
- .
- If you want to configure these things at any other time, run the Settings app.
-
 Package: language-selector-common
 Architecture: all
 Version: 0.228build1patrone2
@@ -1054,4 +1024,34 @@ Description: Notepad: plain text in tabs, for PatroneOS
  and brings them back the next time, without changing the files; Settings
  turns that off, and Notepad then asks to save changes when it closes. The
  command is notepad.
+
+Package: gnome-initial-setup
+Architecture: amd64
+Version: 50.0-0ubuntu7.2patrone5
+Priority: optional
+Section: gnome
+Maintainer: William Daugherty <31995458+billsecond@users.noreply.github.com>
+Original-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3046
+Depends: gnome-settings-daemon (>= 3.24), pkexec (>= 0.103), polkitd (>= 0.103), tecla (>= 45~rc), gnome-control-center-data, systemd | systemd-standalone-sysusers | systemd-sysusers, libaccountsservice0 (>= 0.6.29), libadwaita-1-0 (>= 1.8~alpha), libc6 (>= 2.34), libdrm2 (>= 2.4.3), libfontconfig1 (>= 2.12.6), libgdk-pixbuf-2.0-0 (>= 2.31.1), libgdm1 (>= 3.8.3), libgeoclue-2-0 (>= 2.6.0), libgeocode-glib-2-0 (>= 0.99.1), libglib2.0-0t64 (>= 2.80.0), libgnome-bg-4-2t64 (>= 3.27.90), libgnome-desktop-4-2t64 (>= 3.17.92), libgnome-qr-gtk-4-0 (>= 44.5-1ubuntu1), libgtk-4-1 (>= 4.17.0), libgweather-4-0t64 (>= 4.1), libharfbuzz0b (>= 0.6.0), libibus-1.0-5 (>= 1.5.2), libinsights0 (>= 0.6.0), libjson-glib-1.0-0 (>= 1.5.2), libkrb5-3 (>= 1.8+dfsg), libnm0 (>= 1.2), libnma-gtk4-0 (>= 1.8.34), libpango-1.0-0 (>= 1.32.5), libpolkit-gobject-1-0 (>= 0.103), libpwquality1 (>= 1.1.0), libwebkitgtk-6.0-4 (>= 2.37.1)
+Recommends: accountsservice, geoclue-2.0 (>= 2.6.0), language-selector-common
+Suggests: gdm3
+Breaks: gnome-session-bin (<< 50~)
+Filename: pool/main/gnome-initial-setup_50.0-0ubuntu7.2patrone5_amd64.deb
+Size: 807824
+MD5sum: 5f472974b9f809521d319ddada2b69af
+SHA1: 38e208664357dbc6f7bb9d1b133fdcc5eef507b7
+SHA256: efe69aaf1e41c3a38c47f89c5924cec0300481675d2ac3e79d65da42c4a03312
+SHA512: 4868d099966c054f246c2077d82519d75620ad9196c55e1886d8891d4d3bb55daba0341eaf1884547689a7bccb8a5893a6e6f96c2408b1f28e4d145e39e326c2
+Homepage: https://git.gnome.org/browse/gnome-initial-setup/
+Description: Initial GNOME system setup helper
+ After acquiring or installing a new system there are a few essential things
+ to set up before use. GNOME Initial Setup aims to provide a simple, easy,
+ and safe way to prepare a new system.
+ .
+ GNOME Initial Setup runs the first time you log in to the GNOME desktop
+ and lets you easily configure your language, keyboard layout, online accounts
+ integration, and more.
+ .
+ If you want to configure these things at any other time, run the Settings app.
 
