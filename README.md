@@ -13,15 +13,26 @@ Updates arrive through Patrone Software and the daily automatic updates
 
 ## What's in it
 
-One suite, `resolute` (Ubuntu 26.04 LTS), component `main`, amd64, holding the
-newest version of each package:
+One suite, `resolute` (Ubuntu 26.04 LTS), amd64, holding the newest version
+of each package. Its component `main` has all of them, and is what PatroneOS
+uses:
 
 - Patrone's own packages: everything in PatroneOS's `packaging/`.
 - Patrone's builds of Ubuntu's packages that carry Patrone's changes: GDM
   (`gdm3`, `libgdm1`, `gir1.2-gdm-1.0`, `libgdm-dev`), GNOME Settings
-  (`gnome-control-center` and its `-data`, `-dev` and `-faces`) and
-  first-login setup (`gnome-initial-setup`). Their version is Ubuntu's plus
-  `patroneN`.
+  (`gnome-control-center` and its `-data`, `-dev` and `-faces`), GNOME
+  Software, first-login setup (`gnome-initial-setup`) and Language Support
+  (`language-selector-*`). Their version is Ubuntu's plus `patroneN`.
+
+Its component `apps` is for Ubuntu and systems built on it: only Patrone's
+apps (Patrone Terminal, File Manager, Notepad, Task Manager, Unpack, Remote
+Desktop and the rest), with the fonts they use. Never Patrone's builds of
+Ubuntu's packages, and never what makes a system PatroneOS
+(`patrone-desktop`, `-branding`, `-settings` and the like), so adding it
+changes nothing of Ubuntu's. It's the same index as `main`'s, pointing at
+the same files, less what PatroneOS's `packaging/apps.list` doesn't name;
+`publish.sh` writes both at once, and won't put a version with `patrone`
+in it in `apps`.
 
 The index's `Origin` is `Patrone`, and stays: `patrone.pref` matches on it,
 and apt stops updating from a repository whose Origin changes until it's
@@ -42,10 +53,11 @@ and each is replaced when its next version is published.
 
 | Where | What |
 | --- | --- |
-| `dists/resolute/` on `main` | The index: `Packages` (plain, `.gz`, `.xz`) and `Release`, signed as `InRelease` and `Release.gpg` |
+| `dists/resolute/` on `main` | The index: each component's `Packages` (plain, `.gz`, `.xz`; `main/` and `apps/`) and `Release`, signed as `InRelease` and `Release.gpg` |
 | The [`pool` release](https://github.com/billsecond/patrone-apt/releases/tag/pool) | The `.deb` files: those the index names, and those the index before it named |
 | `patrone-archive-keyring.gpg`, `.asc` | The public key |
 | `patrone.sources` | The source as Patrone installs it |
+| `patrone-apps.sources` | The source for Patrone's apps on Ubuntu: component `apps` only |
 | `tools/assemble-site.sh`, `.github/workflows/pages.yml` | On every push to `main`: the site, the index and key from `main` and the debs from the release, checked against the index's sums and published to Pages |
 | `tools/check-ubuntu.sh`, `.github/workflows/check-ubuntu.yml` | Once a day: whether Ubuntu has updated a package Patrone rebuilds. Each one that's behind gets an issue (label `ubuntu-update`) that closes by itself once the rebuild is published |
 
@@ -102,15 +114,31 @@ Every Patrone install trusts this key alone for this repository: if it's
 lost, installs can't be sent a new one, so keep a copy somewhere other than
 the VM too.
 
-## Adding it by hand
+## Patrone's apps on Ubuntu
 
-To try Patrone's packages on Ubuntu 26.04 LTS:
+For Ubuntu 26.04 LTS and systems built on it, amd64. This adds the `apps`
+component only, so nothing of Ubuntu's is replaced:
 
 ```
 sudo curl -fsSLo /usr/share/keyrings/patrone-archive-keyring.gpg https://billsecond.github.io/patrone-apt/patrone-archive-keyring.gpg
-sudo curl -fsSLo /etc/apt/sources.list.d/patrone.sources https://billsecond.github.io/patrone-apt/patrone.sources
+sudo curl -fsSLo /etc/apt/sources.list.d/patrone-apps.sources https://billsecond.github.io/patrone-apt/patrone-apps.sources
 sudo apt update
+sudo apt install patrone-terminal patrone-file-manager patrone-notepad patrone-task-manager patrone-unpack
 ```
+
+Install what you want of `patrone-terminal`, `patrone-file-manager`,
+`patrone-notepad`, `patrone-task-manager`, `patrone-unpack`,
+`patrone-remote-desktop`, `patrone-shell-config`, `patrone-hyperv-setup`
+and `patrone-guest-tools` (`apt list` shows them once the source is
+added); `fonts-patroneos` comes with the apps that use it. They're updated
+with the rest of the system (Software Updater, `sudo apt upgrade`). To take
+it away again, remove the apps, then
+`/etc/apt/sources.list.d/patrone-apps.sources` and the key, and run `sudo
+apt update`.
+
+Don't add `patrone.sources` to Ubuntu: it's PatroneOS's, and its `main`
+replaces Ubuntu's GDM, GNOME Settings, GNOME Software and first-login setup
+with Patrone's builds.
 
 ## Limits
 
