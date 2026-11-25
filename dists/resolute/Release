@@ -1,24 +1,36 @@
 Architectures: amd64
 Codename: resolute
-Components: main
-Date: Wed, 25 Nov 2026 11:40:13 +0000
+Components: main apps
+Date: Wed, 25 Nov 2026 12:46:02 +0000
 Description: PatroneOS's packages, for Ubuntu 26.04 LTS
 Label: PatroneOS
 Origin: Patrone
 Suite: resolute
 MD5Sum:
+ 9e28c86591f849536514df7f6a0fa2f3            16948 apps/binary-amd64/Packages
+ 33dc115da9e27a5e8c128e8476833d07             6893 apps/binary-amd64/Packages.gz
+ 0c8ce3ae2087769abf992d4ac789d28f             6588 apps/binary-amd64/Packages.xz
  a951d9ab4647dac261c251eb15772c65            62879 main/binary-amd64/Packages
  4ec16f64af9ba862d8fd3690ed5b9202            20767 main/binary-amd64/Packages.gz
  5b8bf0b4db91697257d92d745389844c            18788 main/binary-amd64/Packages.xz
 SHA1:
+ b4cb12fca07f1e23a498599132a600e305b0916d            16948 apps/binary-amd64/Packages
+ 8ffa71e385edae425554eb849d15ab2e52d1a300             6893 apps/binary-amd64/Packages.gz
+ 7667c3f95574e68c95f08c146d343a157231f03e             6588 apps/binary-amd64/Packages.xz
  01a224e6e3ac51e6b608004eb0a5eb437fafffc2            62879 main/binary-amd64/Packages
  daf0c9cdcbddd57366077851ff5e8cc8f9332fb2            20767 main/binary-amd64/Packages.gz
  4d16707ea86041af4f5eb7354cffa61353cb3ec7            18788 main/binary-amd64/Packages.xz
 SHA256:
+ 0e52ce4cdda3e1ef6e6002e594e13e85614647681ef6b99a76248d442feb580a            16948 apps/binary-amd64/Packages
+ d53d4413ed9e2cd929345ddbdd99ac4ca9449bbc0aca3bb9e008c96022c2b2ec             6893 apps/binary-amd64/Packages.gz
+ d0f26229e3d3caabac35daa6c4e04b02cd183b5fef5c1480f05d4af2af40d337             6588 apps/binary-amd64/Packages.xz
  480fdb8857e1906bba5de66371bea4b8321a6342fee5e07bb94c3c1dfd0aedd8            62879 main/binary-amd64/Packages
  0d480046954be70fec910f538793ecbc377008b7a1e77cb39c83aec498e0cab4            20767 main/binary-amd64/Packages.gz
  9734ed2e4194be163a10479ba166be39925a7f7737b6bb0602f7040a86b6e903            18788 main/binary-amd64/Packages.xz
 SHA512:
+ 286c65e215a395e755c44faf265f5b76041a3801c4ca25e6f355089041eeb225398b83beb41dee1d80ff089d6cc69c2c4332e68a7b3f2dcbcfed842948ae5b67            16948 apps/binary-amd64/Packages
+ a6e135b0d065acbd7a2290455f64d2c67ffcf4c7d128cfa799283ab3bfb21413d20fddd5f85225e9e973e0ac19ccf2e49cfc3e6ccac73e67a6f23dc7de179ce4             6893 apps/binary-amd64/Packages.gz
+ 733f3f79e3d6a5af4c28d34bfedc0a4e681e35b611e1fe6d9399bf6732f0f1a9020ffc5498cf00fb6c181892c48efcc3264cc844104180818672863d66448286             6588 apps/binary-amd64/Packages.xz
  e042591ec98b2bf053e860cd2df9b3730951ebcaad477bbd1f348a7a77fa0e32624d219046eeee0ad61f998ea791a3d27a6c7df849ac20e1cc5e8fa278dae606            62879 main/binary-amd64/Packages
  052ac5de4ea8df098721700e19eb7dfc7875aca59f8061f5779da2fe3177c0cfb9d88474e5f483e7fdc49d7e1b9d260cb065fd4a5249c807ed89d42bfa24b6fa            20767 main/binary-amd64/Packages.gz
  b782277a9fc146937f4474b5e0c4f285be100171df7d7594b1536900b66511072d2ee1a27439261a2bfcf1cedc3e7383218a678fd0e35d7d84dd11b14e151f3d            18788 main/binary-amd64/Packages.xz
