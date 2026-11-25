@@ -14,7 +14,7 @@ index=dists/resolute/main/binary-amd64/Packages
 rm -rf "$site"
 mkdir -p "$site"
 cp index.html patrone-archive-keyring.gpg patrone-archive-keyring.asc \
-    patrone.sources patrone-apps.sources "$site/"
+    patrone.sources patrone-apps.sources install-patrone-apps.sh "$site/"
 # Nothing published yet: the landing page and key only
 [ -f "$index" ] || exit 0
 cp -r dists "$site/"

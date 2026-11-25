@@ -43,9 +43,16 @@ Ubuntu updates them.</p>
 <pre>8FE6 1B83 753C 2636 CD74  0259 4FC3 52E3 D384 225F</pre>
 
 <h2>Patrone's apps on Ubuntu</h2>
-<p>For Ubuntu 26.04 LTS (resolute) and systems built on it, amd64. This adds
-only Patrone's apps (the <code>apps</code> component), so nothing of
-Ubuntu's is replaced:</p>
+<p>To install all of them, on Ubuntu 26.04 LTS or any other Linux:</p>
+<pre>curl -fsSL https://billsecond.github.io/patrone-apt/install-patrone-apps.sh | bash</pre>
+<p>On Ubuntu 26.04 and systems built on it, <a href="install-patrone-apps.sh">install-patrone-apps.sh</a>
+adds the source below and installs every app through apt (the guest tools
+and Virtual Machine Setup only in a virtual machine). Anywhere else, or with
+<code>bash -s -- --flatpak</code>, it installs the five Flatpaks for your
+account from Flathub and Patrone's app index.</p>
+<p>To pick the apps yourself, on Ubuntu 26.04 LTS (resolute) and systems
+built on it, amd64, add only Patrone's apps (the <code>apps</code>
+component), so nothing of Ubuntu's is replaced:</p>
 <pre>sudo curl -fsSLo /usr/share/keyrings/patrone-archive-keyring.gpg https://billsecond.github.io/patrone-apt/patrone-archive-keyring.gpg
 sudo curl -fsSLo /etc/apt/sources.list.d/patrone-apps.sources https://billsecond.github.io/patrone-apt/patrone-apps.sources
 sudo apt update

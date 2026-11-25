@@ -58,6 +58,7 @@ and each is replaced when its next version is published.
 | `patrone-archive-keyring.gpg`, `.asc` | The public key |
 | `patrone.sources` | The source as Patrone installs it |
 | `patrone-apps.sources` | The source for Patrone's apps on Ubuntu: component `apps` only |
+| `install-patrone-apps.sh` | Installs all of Patrone's apps on a system that isn't PatroneOS: from `apps` on Ubuntu 26.04, as Flatpaks elsewhere |
 | `tools/assemble-site.sh`, `.github/workflows/pages.yml` | On every push to `main`: the site, the index and key from `main` and the debs from the release, checked against the index's sums and published to Pages |
 | `tools/check-ubuntu.sh`, `.github/workflows/check-ubuntu.yml` | Once a day: whether Ubuntu has updated a package Patrone rebuilds. Each one that's behind gets an issue (label `ubuntu-update`) that closes by itself once the rebuild is published |
 
@@ -116,8 +117,33 @@ the VM too.
 
 ## Patrone's apps on Ubuntu
 
-For Ubuntu 26.04 LTS and systems built on it, amd64. This adds the `apps`
-component only, so nothing of Ubuntu's is replaced:
+To install all of them, on Ubuntu 26.04 LTS or any other Linux:
+
+```
+curl -fsSL https://billsecond.github.io/patrone-apt/install-patrone-apps.sh | bash
+```
+
+What [`install-patrone-apps.sh`](install-patrone-apps.sh) does depends on
+the system:
+
+- **Ubuntu 26.04 and systems built on it, amd64:** it adds the `apps`
+  component (the commands below, through `sudo`, which asks for your
+  password), then installs Terminal, File Manager, Notepad, Task Manager,
+  Unpack, Shell config and Remote Desktop through apt. In a virtual machine it adds the guest tools and Virtual Machine
+  Setup too; on real hardware they'd do nothing. Remote Desktop installs
+  Ubuntu's GDM if it isn't there, but changes nothing until someone runs
+  `sudo patrone-remote-desktop desktops on`.
+- **Any other Linux, or with `--flatpak`** (`... | bash -s -- --flatpak`):
+  it installs the five apps that come as Flatpaks (Terminal, File Manager,
+  Notepad, Task Manager and Unpack) for your account, from Flathub and
+  [Patrone's app index](https://github.com/billsecond/patrone-app-index).
+  That needs `flatpak`, and no `sudo`.
+- **PatroneOS:** it stops; the apps are there already.
+
+Running it again installs any app added since.
+
+To pick the apps yourself, on Ubuntu 26.04 LTS and systems built on it,
+amd64, add the `apps` component only, so nothing of Ubuntu's is replaced:
 
 ```
 sudo curl -fsSLo /usr/share/keyrings/patrone-archive-keyring.gpg https://billsecond.github.io/patrone-apt/patrone-archive-keyring.gpg
